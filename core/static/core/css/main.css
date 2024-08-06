@@ -693,8 +693,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-image: url('.page-title');
-    background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 160px 0 60px 0;
