@@ -3071,7 +3071,6 @@ section,
 }
 
 .technologies {
-  background: url("{% static 'core/img/background-image.jpg' %}") no-repeat center center/cover;
   padding: 60px 0;
 }
 
