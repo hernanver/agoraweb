@@ -89,7 +89,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -883,6 +883,24 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.btn-get-started-2 {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid var(--accent-color);
+}
+
+.btn-get-started-2:hover {
+  background: var(--accent-color);
+  color:white;
+}
 .hero .info .btn-get-started:hover {
   background: var(--accent-color);
 }
@@ -1672,6 +1690,7 @@ section,
   font-size: 2.75rem;
   font-weight: 700;
   margin: 30px 0;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 991px) {

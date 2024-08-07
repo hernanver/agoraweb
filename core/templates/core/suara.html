@@ -1,0 +1,99 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
+          <div class="container position-relative">
+            <h1>MentJove©</h1>
+            <nav class="breadcrumbs">
+              <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="current">MentJove©</li>
+              </ol>
+            </nav>
+          </div>
+        </div><!-- End Page Title -->
+      
+        <!-- Service Details Section -->
+        <section id="service-details" class="service-details section">
+      
+          <div class="container">
+      
+            <div class="row gy-4">
+      
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
+                  <div class="icon mb-2"><i class="fas fa-robot fa-3x" style="color: #16BAC5;"></i></div>
+                  <h4 class="mt-3">Interacción en Tiempo Real</h4>
+                  <p>MentJove interactúa en tiempo real con los usuarios para proporcionar soporte inmediato y personalizado.</p>
+                </div>
+                <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
+                  <div class="icon mb-2"><i class="fas fa-search fa-3x" style="color: #16BAC5;"></i></div>
+                  <h4 class="mt-3">Detección Precoz</h4>
+                  <p>Utiliza IA y NLP para identificar señales tempranas de trastornos mentales.</p>
+                </div>
+                <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
+                  <div class="icon mb-2"><i class="fas fa-headset fa-3x" style="color: #16BAC5;"></i></div>
+                  <h4 class="mt-3">Soporte Continuo</h4>
+                  <p>Ofrece asistencia 24/7, mejorando la accesibilidad y proporcionando soporte constante.</p>
+                </div>
+              </div>
+      
+              <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <h3>MentJove©: Asistente Virtual para la Salud Mental Juvenil</h3>
+                <p>MentJove© es un asistente virtual disruptivo diseñado para mejorar la salud mental de los jóvenes a través de la detección precoz, el soporte continuo y la implementación de técnicas preventivas. Utiliza tecnologías avanzadas para interactuar en tiempo real con el objetivo de identificar y atender las necesidades de las personas atendidas, proporcionando soporte personalizado y recursos educativos.</p>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Detección Precoz: Utiliza IA y NLP para identificar señales tempranas de trastornos mentales.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Soporte Continuo: Ofrece asistencia 24/7, mejorando la accesibilidad y proporcionando soporte constante.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Recursos Educativos: Proporciona información y técnicas de psicología positiva para la prevención y el manejo de problemas de salud mental.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Interfaz Amigable: Fácil de usar, permitiendo una interacción fluida y eficaz.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i>  <span>Colaboración con SUARA: Aporta experiencia en salud mental y recursos educativos.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i>  <span>Aprendizaje Automático: Mejora continuamente sus capacidades mediante la interacción y el feedback de los usuarios.</span></li>
+                  <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Plataforma Segura e Inclusiva: Garantiza un entorno seguro para los jóvenes, protegiendo su privacidad y datos.</span></li>
+                </ul>
+
+            <!-- Image Gallery -->
+            <div class="gallery mt-4">
+                <h4 class="mb-3">Galería de Imágenes</h4>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <img src="{% static 'core/img/suara1.png' %}" alt="Gallery Image 1" class="img-fluid rounded shadow-sm">
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <img src="{% static 'core/img/suara2.png' %}" alt="Gallery Image 2" class="img-fluid rounded shadow-sm">
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <img src="{% static 'core/img/IA.jpg' %}" alt="Gallery Image 3" class="img-fluid rounded shadow-sm">
+                  </div>
+                </div>
+              </div>
+
+                <div class="text-center mt-4">
+                    <a href="{% url 'home' %}#contact" class="btn-get-started-2">Solicita una Consulta Gratuita</a>
+                  </div>
+                  
+              </div>
+      
+            </div>
+      
+          </div>
+      
+        </section><!-- /Service Details Section -->
+      
+      </main>
+      
+      
+
+
+</div>
+
+
+
+
+{% endblock %}
