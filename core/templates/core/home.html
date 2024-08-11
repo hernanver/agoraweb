@@ -5,7 +5,7 @@
 {% load static %}
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>L Agora de la Terra</title>
+  <title>AgoraTechAI</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -111,7 +111,7 @@
             <div class="col-lg-6 text-center">
               <h2>
                 <div id="animatedText">
-                  Revoluciona tu Negocio con Inteligencia Artificial
+                  Revoluciona tu Organización con Inteligencia Artificial
                 </div>
               </h2>
               <p id="animateMe">
@@ -133,7 +133,7 @@
                 <span>I</span>
                 <span>A</span>
               </p>
-              <a href="#get-started" class="btn-get-started">Solicita una Consulta Gratuita</a>
+              <a href="{% url 'home' %}#contactoTitle" class="btn-get-started">Solicita una Consulta Gratuita</a>
             </div>
           </div>
         </div>
@@ -178,56 +178,38 @@
   <div class="container section-title" data-aos="fade-up">
     <h2>Nuestros Servicios</h2>
     <p>
-      Descubre cómo nuestras soluciones de IA pueden transformar tu negocio. Nos especializamos en una variedad de servicios diseñados para satisfacer tus necesidades específicas.
+      Descubre cómo nuestras soluciones de IA pueden transformar tu organización. Nos especializamos en una variedad de servicios diseñados para satisfacer tus necesidades específicas.
     </p>
   </div>
-
   <section id="features" class="features section">
     <div class="container">
       <ul class="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
-            <h4>Chatbots Inteligentes</h4>
-          </a>
-        </li>
-        <li class="nav-item col-3" role="presentation">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
             <h4>Transcripción Automática</h4>
           </a>
         </li>
         <li class="nav-item col-3" role="presentation">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
+            <h4>Asistentes Virtuales</h4>
+          </a>
+        </li>
+        <li class="nav-item col-3" role="presentation">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabindex="-1" role="tab">
-            <h4>Soluciones Personalizadas</h4>
+            <h4>Chatbots Inteligentes</h4>
           </a>
         </li>
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabindex="-1" role="tab">
-            <h4>Asistentes Virtuales</h4>
+            <h4>Soluciones Personalizadas</h4>
           </a>
         </li>
       </ul>
 
-        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-          <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Chatbots Inteligentes para Atención al Cliente</h3>
-                <p class="fst-italic">"Automatiza la atención al cliente con chatbots que entienden y responden a las consultas de manera rápida y precisa."</p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i><span>Ahorro de Tiempo y Recursos: Reduce la carga de trabajo del personal y permite que se concentren en tareas más críticas.</span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Disponibilidad 24/7: Ofrece atención continua, mejorando la satisfacción del cliente.</span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Mejora en la Experiencia del Usuario: Interacciones más rápidas y personalizadas.</span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Casos de Uso: E-commerce, salud, educación.</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'core/img/chatbot.jpg' %}" alt="" class="img-fluid"/>
-              </div>
-            </div>
-          </div>
 
-          
-        <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
+
+      <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+        <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
               <h3>Plataformas de Transcripción Automática</h3>
@@ -235,8 +217,8 @@
               <ul>
                 <li><i class="bi bi-check2-all"></i><span>Eficiencia Mejorada: Transcribe automáticamente y reduce el tiempo dedicado a la transcripción manual.</span></li>
                 <li><i class="bi bi-check2-all"></i><span>Alta Precisión: Minimiza errores y mejora la calidad de los registros.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Fácil Integración: Compatible con tus sistemas actuales.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Periodismo, investigación académica, administración.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>Accesibilidad Global: Permite el acceso a documentos históricos desde cualquier lugar y en cualquier momento.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>Mejora en la Experiencia del Usuario: Gracias a la precisión de nuestras tecnologías de reconocimiento de texto y procesamiento de imágenes, los usuarios pueden confiar en la exactitud de las transcripciones, lo que mejora la fiabilidad de sus investigaciones y proyectos.</span></li>
               </ul>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -244,26 +226,9 @@
             </div>
           </div>
         </div>
-      
-        <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
-          <div class="row">
-            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-              <h3>Soluciones Personalizadas con IA</h3>
-              <p class="fst-italic">"Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de tu empresa, desde análisis predictivo hasta automatización completa de procesos."</p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i><span>Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis precisos y en tiempo real.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Aumento de la Productividad: Optimiza procesos y reduce costos operativos.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Finanzas, marketing, logística.</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 text-center">
-              <img src="{% static 'core/img/solucionesia.jpg' %}" alt="" class="img-fluid"/>
-            </div>
-          </div>
-        </div>
-      
-        <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
+
+          
+        <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
               <h3>Asistentes Virtuales Especializados</h3>
@@ -280,11 +245,46 @@
             </div>
           </div>
         </div>
+      
+        <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+              <h3>Chatbots Inteligentes para Atención al Cliente con Impacto Social</h3>
+                <p class="fst-italic">"Automatiza las consultas frecuentes y repetitivas con chatbots que entienden y responden de manera rápida y precisa. Esto libera al personal para que puedan enfocarse en tareas más significativas y de mayor impacto, como ofrecer apoyo personalizado a quienes más lo necesitan, especialmente en organizaciones sociales, organismos públicos pequeños, empresas, o en áreas con recursos limitados"</p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i><span>Acceso Continuo a Servicios: Los chatbots están disponibles 24/7, garantizando que las personas puedan acceder a la ayuda y los servicios cuando más los necesiten, sin importar la hora o su ubicación.</span></li>
+                  <li><i class="bi bi-check2-all"></i><span>Mejora en la Inclusión y la Experiencia del Usuario: Los chatbots pueden proporcionar interacciones más rápidas y adaptadas a las necesidades individuales de cada persona, desde usuarios que requieren asistencia inmediata hasta aquellos que buscan información en un lenguaje accesible y claro. </span></li>
+                  <li><i class="bi bi-check2-all"></i><span>Mejora en la Experiencia del Usuario: Interacciones más rápidas y personalizadas.</span></li>
+                  <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Organizaciones sociales, Salud, Educación.</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 'core/img/chatbot.jpg' %}"alt="" class="img-fluid"/>
+            </div>
+          </div>
+        </div>
+      
+        <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+              <h3>Soluciones Personalizadas con IA</h3>
+              <p class="fst-italic">"Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de tu empresa, desde análisis predictivo hasta automatización completa de procesos."</p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i><span>Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis precisos y en tiempo real.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>Aumento de la Productividad: Optimiza procesos y reduce costos operativos.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Finanzas, marketing, logística.</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 'core/img/solucionesia.jpg' %}"  alt="" class="img-fluid"/>
+            </div>
+          </div>
+        </div>
       </div>
       
     </section>
   </section>
-
 
   <section id="technologies" class="technologies section light-background">
     <div class="container section-title" data-aos="fade-up">
@@ -300,7 +300,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-chat-dots"></i></div>
-            <h4><a href="#">Modelos de Respuesta GPT</a></h4>
+            <h4>Modelos de Respuesta GPT</h4>
             <p>Modelos avanzados entrenados con información específica para ofrecer respuestas precisas y relevantes.</p>
           </div>
         </div>
@@ -309,7 +309,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-aspect-ratio"></i></div>
-            <h4><a href="#">Modelos de Visión GPT</a></h4>
+            <h4>Modelos de Visión GPT</h4>
             <p>Soluciones de visión por computadora que permiten el reconocimiento y análisis de imágenes y videos.</p>
           </div>
         </div>
@@ -318,7 +318,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-translate"></i></div>
-            <h4><a href="#">Modelos de Traducción Automática</a></h4>
+            <h4>Modelos de Traducción Automática</h4>
             <p>Traducción precisa y rápida entre múltiples idiomas, optimizando la comunicación global.</p>
           </div>
         </div>
@@ -327,7 +327,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-mic"></i></div>
-            <h4><a href="#">Modelos de Transcripción</a></h4>
+            <h4>Modelos de Transcripción</h4>
             <p>Transforma texto a voz y voz a texto con alta precisión y eficiencia.</p>
           </div>
         </div>
@@ -336,7 +336,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-cpu"></i></div>
-            <h4><a href="#">Soluciones Integradas</a></h4>
+            <h4>Soluciones Integradas</h4>
             <p>Implementaciones personalizadas combinando múltiples modelos para resolver problemas complejos.</p>
           </div>
         </div>
@@ -369,7 +369,8 @@
 
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <h3>Sobre Nosotros</h3>
-            <p>En L'Àgora de la Terra, combinamos nuestra experiencia en agroecología con la innovación tecnológica para ofrecer soluciones de Inteligencia Artificial que transforman empresas. Nuestro enfoque está en crear herramientas que mejoren la eficiencia, aumenten la productividad y optimicen la experiencia del cliente.</p>
+            <p>En ÀgoraTechAI, combinamos nuestra experiencia en agroecología con la innovación tecnológica para ofrecer soluciones de Inteligencia Artificial que transforman empresas. Nuestro enfoque está en crear herramientas que mejoren la eficiencia, aumenten la productividad y optimicen la experiencia del cliente.
+            </p>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-easel flex-shrink-0"></i>
@@ -396,7 +397,7 @@
             </div><!-- End Icon Box -->
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <i class="bi bi-award"></i>
               <div>
                 <h4><a href="" class="stretched-link">Educación Continua</a></h4>
                 <p>Programas y proyectos educativos y de formación.</p>
@@ -424,9 +425,9 @@
             <h2 class="inner-title">Nuestra Historia</h2>
             <div class="our-story">
               <h4>Est 1988</h4>
-              <h3>L’Àgora</h3>
+              <h3>ÀgoraTechAI</h3>
               <p>
-                es una start-up de alto impacto social con un equipo transdisciplinario experimentado. Nos encontramos en fase de despliegue tecnológico, centrándonos en visión por computadora e IA, en colaboración con el Computer Vision Center (CVC) de la Universidad Autónoma de Barcelona. Nuestro objetivo es mejorar el bienestar social y la calidad de vida a través de la tecnología
+                es una start-up de alto impacto social con un equipo transdisciplinar experimentado y joven a la vez. Nos encontramos en fase de despliegue tecnológico, centrándonos en IA y visión por computador, en colaboración con el Computer Vision Center (CVC), del Parque Tecnológico (Universidad Autónoma de Barcelona). Nuestro objetivo es mejorar el bienestar social y la calidad de vida a través de la tecnología. Buscamos transformar los servicios para mejorar la eficiencia y el bienestar de las personas.
               </p>
                 
               {% comment %} <ul>
@@ -485,7 +486,6 @@
             <li data-filter=".filter-suara">Suara</li>
             <li data-filter=".filter-transcripcion">Transcripción Automática</li>
             <li data-filter=".filter-agroecobot">AgroEcoBot</li>
-            <li data-filter=".filter-asistente">Asistente Virtual</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -515,17 +515,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/agroecobot3.png' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>AgroEcoBot</h4>
-                  <p>Chatbot Inteligente experto en Agroecología con IA</p>
-                  <a href="{% static 'core/img/agroecobot3.png' %}" title="AgroEcoBot" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'agroecobot' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
               <div class="portfolio-content h-100">
@@ -551,62 +541,64 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-asistente">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
               <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/asistentevirtual.png' %}" class="img-fluid" alt="">
+                <img src="{% static 'core/img/transcripcion2.jpg' %}"  class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Asistente Virtual</h4>
-                  <p>Chatbots Inteligentes para Atención al Cliente</p>
-                  <a href="{% static 'core/img/asistentevirtual.png' %}" title="Asistente Virtual" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>STHI</h4>
+                  <p>Transcripción Semi-Automática</p>
+                  <a href="{% static 'core/img/transcripcion2.jpg' %}" title="Documento" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'sthi' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
               <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/projects/repairs-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'core/img/transcripcion3.jpg' %}"  class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/projects/repairs-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>STHI</h4>
+                  <p>Transcripción Semi-Automática</p>
+                  <a href="{% static 'core/img/transcripcion3.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'sthi' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
               <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/projects/design-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'core/img/suara2.jpg' %}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/projects/design-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Suara</h4>
+                  <p>Solución Personalizada</p>
+                  <a href="{% static 'core/img/suara2.jpg' %}" title="Chatbot de ayuda" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'suara' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
               <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/projects/remodeling-3.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'core/img/logo-suara.png' %}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/projects/remodeling-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Suara</h4>
+                  <p>Solución Personalizada</p>
+                  <a href="{% static 'core/img/logo-suara.png' %}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'suara' %}" title="Suara" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/construction-3.jpg" class="img-fluid" alt="">
+                <img src="{% static 'core/img/agroecobot3.png' %}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/projects/construction-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>AgroEcoBot</h4>
+                  <p>Chatbot Inteligente experto en Agroecología con IA</p>
+                  <a href="{% static 'core/img/agroecobot3.png' %}" title="AgroEcoBot" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'agroecobot' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -750,8 +742,8 @@
 
 
 
-    {% comment %} <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
+  <!-- Testimonials Section -->
+    {% comment %} <section id="testimonials" class="testimonials section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -885,7 +877,7 @@
 
       </div>
 
-    </section><!-- /Testimonials Section --> {% endcomment %}
+    </section><!-- /Testimonials Section -->  {% endcomment %}
 
 
     {% comment %} <!-- Recent Blog Posts Section -->
@@ -1003,13 +995,12 @@
   </main>
 
 <!-- FOOTER Section -->
-<!-- FOOTER Section -->
 <footer id="footer" class="footer dark-background">
   <div class="container footer-top text-center text-md-start">
     <div class="row">
 
       <div class="col-md-4 footer-links">
-        <h4>Useful Links</h4>
+        <h4>ÀgoraTechAI</h4>
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="#services">Servicios</a></li>
@@ -1047,10 +1038,28 @@
       </div>
       
       <div class="col-md-12 text-center footer-about">
-        <a href="{% url 'home' %}" class="logo d-flex align-items-center justify-content-center">
-          <img src="{% static 'core/img/footer-logo.png' %}" alt="Logo"/>
-        </a>
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+
+            <a href="{% url 'home' %}" class="logo d-flex align-items-center justify-content-center mx-3">
+              <img src="{% static 'core/img/footer-logo.png' %}" alt="Logo ÀgoraTechAI" class="footer-logo-img"/ style="max-height: 140px; margin-bottom: -4rem;">
+          </a>
+
+        </div>
+    </div>
+          
+
+
+    <div class="col-md-12 text-center footer-about mt-4">
+      <div class="d-flex justify-content-center align-items-center flex-wrap">
+          <img src="{% static 'core/img/logo-generalitat.jpg' %}" alt="Logo Generalitat de Catalunya" class="footer-logo-img" style="max-height: 40px; max-width: 100%; margin-right: 10px;">
+          <p class="support-text" style="margin: 0; white-space: nowrap; overflow: hidden;">
+              Amb el suport del Departament d'Empresa i Treball
+          </p>
       </div>
+  </div>
+  
+  
+
       
     </div>
   </div>
@@ -1058,12 +1067,12 @@
   <div class="container copyright text-center">
     <p>
       © <span>Copyright</span>
-      <strong class="px-1 sitename">EL ÁGORA DE LA TIERRA</strong>
+      <strong class="px-1 sitename">ÀgoraTechAI</strong>
       <span>All Rights Reserved</span>
     </p>
-    <div class="credits">
+    {% comment %} <div class="credits">
       Designed by <a href="#">Hernán Verzini - Santiago Nardelli</a>
-    </div>
+    </div> {% endcomment %}
   </div>
 </footer>
 

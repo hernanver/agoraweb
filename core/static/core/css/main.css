@@ -471,14 +471,14 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
-.footer .footer-about .logo img {
+/* .footer .footer-about .logo img {
   max-height: 140px;
   margin-right: 6px;
   margin-bottom: -4rem;
-}
+} */
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
@@ -610,6 +610,42 @@ h6 {
 
     justify-content: center;
   }
+}
+@media (max-width: 768px) {
+  .footer-logo-img {
+      max-height: 40px; /* Ajusta la altura para pantallas más pequeñas */
+  }
+  .footer .footer-about .logo {
+      margin-bottom: 20px; /* Añade margen inferior para espaciado en pantallas pequeñas */
+  }
+  .support-text {
+    font-size: 12px;
+    margin-top: 15px;
+    flex-direction: column;
+
+}
+
+}
+
+.footer-logo-img {
+  max-height: 40px; 
+  width: auto;
+  margin-right: 10px;
+}
+.footer .footer-about {
+  padding: 10px 0;
+}
+
+.support-text {
+  font-size: 14px;
+  color: var(--default-color);
+  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  white-space: nowrap; /* Evita el desbordamiento */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  text-overflow: ellipsis; /* Si el texto se desborda, añade puntos suspensivos */
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -1277,6 +1313,8 @@ section,
 .alt-services .icon-box h4 a:hover {
   color: var(--accent-color);
 }
+
+
 
 .alt-services .icon-box p {
   line-height: 24px;
@@ -3050,6 +3088,7 @@ section,
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 20px;
+  cursor:pointer;
 }
 
 .icon-box:hover {
@@ -3064,6 +3103,8 @@ section,
 
 .icon-box h4 {
   margin-top: 15px;
+  transition: color 0.3s;
+  cursor:pointer;
 }
 
 .icon-box h4 a {
@@ -3072,8 +3113,8 @@ section,
   transition: color 0.3s;
 }
 
-.icon-box h4 a:hover {
-  color:  var(--accent-color); 
+.icon-box h4:hover {
+  color: var(--accent-color); 
 }
 
 .icon-box p {
