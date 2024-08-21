@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['agoratech-ai.com', 'www.agoratech-ai.com', 'agoraweb-7d7dc24c3bf7.herokuapp.com']
+ALLOWED_HOSTS = ['agoratech-ai.com', 'www.agoratech-ai.com', 'agoraweb-7d7dc24c3bf7.herokuapp.com', '*', ]
 
 
 # Application definition
@@ -157,9 +157,9 @@ EMAIL_HOST_USER = 'tu-email@gmail.com'
 EMAIL_HOST_PASSWORD = 'tu-password'
 
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_HSTS_SECONDS = 31536000  # 1 año
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_PRELOAD = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
