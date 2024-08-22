@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+
+
+<html lang="{% load i18n %}{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}">
 
 <head>
 {% load static %}
+{% load i18n %}
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>AgoraTechAI</title>
@@ -43,62 +46,78 @@
     }
 });
 </script>
-  <!-- =======================================================
-  * Template Name: UpConstruction
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+
 </head>
 
 <body class="index-page">
-
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
+  
       <a href="{% url 'home' %}" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <div class="logo-img"> 
           <img src="{% static 'core/img/logo-lagora2_pre.png' %}" alt="Logo"> 
         </div>
-        <!-- <h1 class="sitename">UpConstruction</h1> <span>.</span> -->
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{% url 'home' %}" class="active">Home</a></li>
-          <li><a href="{% url 'home' %}#services">Servicios</a></li>
-          <li><a href="{% url 'home' %}#technologies">Tecnologías</a></li>
-          <li><a href="{% url 'home' %}#sobreNosotrosTitle">Nosotros</a></li>
-          <li><a href="{% url 'home' %}#proyectosTitle">Proyectos</a></li>
-          <li><a href="{% url 'home' %}#contactoTitle">Contacto</a></li>
-
-          {% comment %} <li><a href="blog.html">Blog</a></li> {% endcomment %}
-          {% comment %} <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> {% endcomment %}
-            {% comment %} <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> {% endcomment %}
-            </ul>
-          {% comment %} </li> {% endcomment %}
-          {% comment %} <li><a href="contact.html">Contact</a></li>
-        </ul> {% endcomment %}
+          <li><a href="{% url 'home' %}#services">{% trans "Servicios" %}</a></li>
+          <li><a href="{% url 'home' %}#technologies">{% trans "Tecnologías" %}</a></li>
+          <li><a href="{% url 'home' %}#sobreNosotrosTitle">{% trans "Nosotros" %}</a></li>
+          <li><a href="{% url 'home' %}#proyectosTitle">{% trans "Proyectos" %}</a></li>
+          <li><a href="{% url 'home' %}#contactoTitle">{% trans "Contacto" %}</a></li>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
+  
+      <!-- Language Switcher Outside the Navigation -->
+      <div class="language-switcher d-flex align-items-center">
+        <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-translate"></i> {% get_current_language as LANGUAGE_CODE %}
+          {% if LANGUAGE_CODE == 'es' %} {% trans "Español" %}
+          {% elif LANGUAGE_CODE == 'ca' %} {% trans "Català" %}
+          {% elif LANGUAGE_CODE == 'en' %} {% trans "English" %}
+          {% endif %}
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+          <li>
+            <a class="dropdown-item" href="#" onclick="document.getElementById('language-form-es').submit();">
+              <img src="{% static 'core/img/es.png' %}" alt="Español" width="20"> {% trans "Español" %}
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="document.getElementById('language-form-ca').submit();">
+              <img src="{% static 'core/img/ca.png' %}" alt="Català" width="20"> {% trans "Català" %}
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="document.getElementById('language-form-en').submit();">
+              <img src="{% static 'core/img/en.png' %}" alt="English" width="20"> {% trans "English" %}
+            </a>
+          </li>
+        </ul>
+  
+        <!-- Hidden Forms for Language Switching -->
+        <form id="language-form-es" action="{% url 'set_language' %}" method="post" style="display: none;">
+          {% csrf_token %}
+          <input type="hidden" name="language" value="es">
+        </form>
+        <form id="language-form-ca" action="{% url 'set_language' %}" method="post" style="display: none;">
+          {% csrf_token %}
+          <input type="hidden" name="language" value="ca">
+        </form>
+        <form id="language-form-en" action="{% url 'set_language' %}" method="post" style="display: none;">
+          {% csrf_token %}
+          <input type="hidden" name="language" value="en">
+        </form>
+      </div>
     </div>
   </header>
+  
+
+
 
   <main class="main">
 
@@ -111,29 +130,16 @@
             <div class="col-lg-6 text-center">
               <h2>
                 <div id="animatedText">
-                  Revoluciona tu Organización con Inteligencia Artificial
+                  {% trans "Revoluciona tu Organización con Inteligencia Artificial" %}
                 </div>
               </h2>
               <p id="animateMe">
-                <span>S</span>
-                <span>o</span>
-                <span>l</span>
-                <span>u</span>
-                <span>c</span>
-                <span>i</span>
-                <span>o</span>
-                <span>n</span>
-                <span>e</span>
-                <span>s</span>
-                <span> </span>
-                <span>c</span>
-                <span>o</span>
-                <span>n</span>
-                <span> </span>
-                <span>I</span>
-                <span>A</span>
+                <span class="mr-4">{% trans "Soluciones" %}</span>
+                <span>{% trans "con" %}</span>
+                <span>{% trans "IA" %}</span>
               </p>
-              <a href="{% url 'home' %}#contactoTitle" class="btn-get-started">Solicita una Consulta Gratuita</a>
+              
+              <a href="{% url 'home' %}#contactoTitle" class="btn-get-started">{% trans "Solicita una Consulta Gratuita" %}</a>
             </div>
           </div>
         </div>
@@ -176,49 +182,48 @@
 <!-- SERVICIOS Section -->
 <section id="services" class="services section light-background">
   <div class="container section-title" data-aos="fade-up">
-    <h2>Nuestros Servicios</h2>
+    <h2>{% trans "Nuestros Servicios" %}</h2>
     <p>
-      Descubre cómo nuestras soluciones de IA pueden transformar tu organización. Nos especializamos en una variedad de servicios diseñados para satisfacer tus necesidades específicas.
+      {% trans "Descubre cómo nuestras soluciones de IA pueden transformar tu organización. Estamos especializados en una variedad de servicios diseñados para satisfacer tus necesidades específicas." %}
     </p>
   </div>
+
   <section id="features" class="features section">
     <div class="container">
       <ul class="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
-            <h4>Transcripción Automática</h4>
+            <h4>{% trans "Transcripción Automática" %}</h4>
           </a>
         </li>
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
-            <h4>Asistentes Virtuales</h4>
+            <h4>{% trans "Asistentes Virtuales" %}</h4>
           </a>
         </li>
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabindex="-1" role="tab">
-            <h4>Chatbots Inteligentes</h4>
+            <h4>{% trans "Chatbots Inteligentes" %}</h4>
           </a>
         </li>
         <li class="nav-item col-3" role="presentation">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabindex="-1" role="tab">
-            <h4>Soluciones Personalizadas</h4>
+            <h4>{% trans "Soluciones Personalizadas" %}</h4>
           </a>
         </li>
       </ul>
-
-
 
       <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
         <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-              <h3>Plataformas de Transcripción Automática</h3>
-              <p class="fst-italic">"Transforma tus procesos de transcripción con nuestra tecnología avanzada de IA, capaz de manejar grandes volúmenes de datos con alta precisión."</p>
+              <h3>{% trans "Plataformas de Transcripción Automática" %}</h3>
+              <p class="fst-italic">{% trans "Transforma tus procesos de transcripción con nuestra tecnología avanzada de IA, capaz de manejar grandes volúmenes de datos con alta precisión." %}</p>
               <ul>
-                <li><i class="bi bi-check2-all"></i><span>Eficiencia Mejorada: Transcribe automáticamente y reduce el tiempo dedicado a la transcripción manual.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Alta Precisión: Minimiza errores y mejora la calidad de los registros.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Accesibilidad Global: Permite el acceso a documentos históricos desde cualquier lugar y en cualquier momento.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Mejora en la Experiencia del Usuario: Gracias a la precisión de nuestras tecnologías de reconocimiento de texto y procesamiento de imágenes, los usuarios pueden confiar en la exactitud de las transcripciones, lo que mejora la fiabilidad de sus investigaciones y proyectos.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Eficiencia Mejorada: Transcribe automáticamente y reduce el tiempo dedicado a la transcripción manual." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Alta Precisión: Minimiza errores y mejora la calidad de los registros." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Accesibilidad Global: Permite el acceso a documentos históricos desde cualquier lugar y en cualquier momento." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Mejora en la Experiencia del Usuario: Gracias a la precisión de nuestras tecnologías de reconocimiento de texto y procesamiento de imágenes, los usuarios pueden confiar en la exactitud de las transcripciones, lo que mejora la fiabilidad de sus investigaciones y proyectos." %}</span></li>
               </ul>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -227,17 +232,16 @@
           </div>
         </div>
 
-          
         <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-              <h3>Asistentes Virtuales Especializados</h3>
-              <p class="fst-italic">"Implementa asistentes virtuales para tareas específicas dentro de tu organización, mejorando la eficiencia y reduciendo la carga de trabajo."</p>
+              <h3>{% trans "Asistentes Virtuales Especializados" %}</h3>
+              <p class="fst-italic">{% trans "Implementa asistentes virtuales para tareas específicas dentro de tu organización, mejorando la eficiencia y reduciendo la carga de trabajo." %}</p>
               <ul>
-                <li><i class="bi bi-check2-all"></i><span>Personalización: Adaptados a las necesidades y procesos de tu empresa.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Disponibilidad Constante: Operativos 24/7 para soporte continuo.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Reducción de Carga Laboral: Libera a tu personal de tareas repetitivas.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Soporte técnico, recursos humanos, formación.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Personalización: Adaptados a las necesidades y procesos de tu empresa." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Disponibilidad Constante: Operativos las 24 horas para soporte continuo." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Reducción de Carga Laboral: Libera a tu personal de tareas repetitivas." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Casos de Uso: Soporte técnico, recursos humanos, formación." %}</span></li>
               </ul>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -245,365 +249,358 @@
             </div>
           </div>
         </div>
-      
+
         <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-              <h3>Chatbots Inteligentes para Atención al Cliente con Impacto Social</h3>
-                <p class="fst-italic">"Automatiza las consultas frecuentes y repetitivas con chatbots que entienden y responden de manera rápida y precisa. Esto libera al personal para que puedan enfocarse en tareas más significativas y de mayor impacto, como ofrecer apoyo personalizado a quienes más lo necesitan, especialmente en organizaciones sociales, organismos públicos pequeños, empresas, o en áreas con recursos limitados"</p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i><span>Acceso Continuo a Servicios: Los chatbots están disponibles 24/7, garantizando que las personas puedan acceder a la ayuda y los servicios cuando más los necesiten, sin importar la hora o su ubicación.</span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Mejora en la Inclusión y la Experiencia del Usuario: Los chatbots pueden proporcionar interacciones más rápidas y adaptadas a las necesidades individuales de cada persona, desde usuarios que requieren asistencia inmediata hasta aquellos que buscan información en un lenguaje accesible y claro. </span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Mejora en la Experiencia del Usuario: Interacciones más rápidas y personalizadas.</span></li>
-                  <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Organizaciones sociales, Salud, Educación.</span></li>
+              <h3>{% trans "Chatbots Inteligentes para Atención al Cliente con Impacto Social" %}</h3>
+              <p class="fst-italic">{% trans "Automatiza las consultas frecuentes y repetitivas con chatbots que entienden y responden de manera rápida y precisa. Esto libera al personal para que puedan enfocarse en tareas más significativas y de mayor impacto, como ofrecer apoyo personalizado a quienes más lo necesitan, especialmente en organizaciones sociales, organismos públicos pequeños, empresas, o en áreas con recursos limitados." %}</p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Acceso Continuo a Servicios: Los chatbots están disponibles las 24 horas, garantizando que las personas puedan acceder a la ayuda y los servicios cuando más los necesiten, sin importar la hora o su ubicación." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Mejora en la Inclusión y la Experiencia del Usuario: Los chatbots pueden proporcionar interacciones más rápidas y adaptadas a las necesidades individuales de cada persona, desde usuarios que requieren asistencia inmediata hasta aquellos que buscan información en un lenguaje accesible y claro." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Mejora en la Experiencia del Usuario: Interacciones más rápidas y personalizadas." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Casos de Uso: Organizaciones sociales, Salud, Educación." %}</span></li>
               </ul>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
-              <img src="{% static 'core/img/chatbot.jpg' %}"alt="" class="img-fluid"/>
+              <img src="{% static 'core/img/chatbot.jpg' %}" alt="" class="img-fluid"/>
             </div>
           </div>
         </div>
-      
+
         <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-              <h3>Soluciones Personalizadas con IA</h3>
-              <p class="fst-italic">"Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de tu empresa, desde análisis predictivo hasta automatización completa de procesos."</p>
+              <h3>{% trans "Soluciones Personalizadas con IA" %}</h3>
+              <p class="fst-italic">{% trans "Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de tu empresa, desde análisis predictivo hasta automatización completa de procesos." %}</p>
               <ul>
-                <li><i class="bi bi-check2-all"></i><span>Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis precisos y en tiempo real.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Aumento de la Productividad: Optimiza procesos y reduce costos operativos.</span></li>
-                <li><i class="bi bi-check2-all"></i><span>Casos de Uso: Finanzas, marketing, logística.</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis precisos y en tiempo real." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Aumento de la Productividad: Optimiza procesos y reduce costos operativos." %}</span></li>
+                <li><i class="bi bi-check2-all"></i><span>{% trans "Casos de Uso: Finanzas, marketing, logística." %}</span></li>
               </ul>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 text-center">
-              <img src="{% static 'core/img/solucionesia.jpg' %}"  alt="" class="img-fluid"/>
+              <img src="{% static 'core/img/solucionesia.jpg' %}" alt="" class="img-fluid"/>
             </div>
           </div>
         </div>
       </div>
-      
-    </section>
-  </section>
 
-  <section id="technologies" class="technologies section light-background">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Tecnologías Utilizadas</h2>
-      <p>
-        Utilizamos tecnologías de vanguardia para ofrecer soluciones eficientes y efectivas.
-      </p>
     </div>
+  </section>
+</section>
 
-    <div class="container">
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-chat-dots"></i></div>
-            <h4>Modelos de Respuesta GPT</h4>
-            <p>Modelos avanzados entrenados con información específica para ofrecer respuestas precisas y relevantes.</p>
-          </div>
+
+<section id="technologies" class="technologies section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>{% trans "Tecnologías Utilizadas" %}</h2>
+    <p>
+      {% trans "Utilizamos tecnologías de vanguardia para ofrecer soluciones eficientes y efectivas." %}
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-chat-dots"></i></div>
+          <h4>{% trans "Modelos de Respuesta GPT" %}</h4>
+          <p>{% trans "Modelos avanzados entrenados con información específica para ofrecer respuestas precisas y relevantes." %}</p>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-aspect-ratio"></i></div>
-            <h4>Modelos de Visión GPT</h4>
-            <p>Soluciones de visión por computadora que permiten el reconocimiento y análisis de imágenes y videos.</p>
-          </div>
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-aspect-ratio"></i></div>
+          <h4>{% trans "Modelos de Visión GPT" %}</h4>
+          <p>{% trans "Soluciones de visión por computador que permiten el reconocimiento y análisis de imágenes y videos." %}</p>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-translate"></i></div>
-            <h4>Modelos de Traducción Automática</h4>
-            <p>Traducción precisa y rápida entre múltiples idiomas, optimizando la comunicación global.</p>
-          </div>
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-translate"></i></div>
+          <h4>{% trans "Modelos de Traducción Automática" %}</h4>
+          <p>{% trans "Traducción precisa y rápida entre múltiples idiomas, optimizando la comunicación global." %}</p>
         </div>
+      </div>
 
-        <!-- Card 4 -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-mic"></i></div>
-            <h4>Modelos de Transcripción</h4>
-            <p>Transforma texto a voz y voz a texto con alta precisión y eficiencia.</p>
-          </div>
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-mic"></i></div>
+          <h4>{% trans "Modelos de Transcripción" %}</h4>
+          <p>{% trans "Transforma texto en voz y voz en texto con alta precisión y eficiencia." %}</p>
         </div>
+      </div>
 
-        <!-- Card 5 -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-cpu"></i></div>
-            <h4>Soluciones Integradas</h4>
-            <p>Implementaciones personalizadas combinando múltiples modelos para resolver problemas complejos.</p>
-          </div>
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-cpu"></i></div>
+          <h4>{% trans "Soluciones Integradas" %}</h4>
+          <p>{% trans "Implementaciones personalizadas combinando múltiples modelos para resolver problemas complejos." %}</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   
-    <!-- Sobre nosotros -->
+<!-- Sobre nosotros -->
 
-     <!-- Page Title -->
-    <div id="sobreNosotrosTitle" class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
-      <div class="container position-relative">
-        <h1>About</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </nav>
+<!-- Page Title -->
+<div id="sobreNosotrosTitle" class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
+  <div class="container position-relative">
+    <h1>{% trans "Quiénes Somos" %}</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+        <li class="current">{% trans "Quiénes Somos" %}</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+<section id="alt-services" class="alt-services section">
+  <div class="container">
+    <div class="row justify-content-around gy-4">
+      <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="{% static 'core/img/sobre-nosotros1.jpg' %}" alt="">
       </div>
-    </div><!-- End Page Title -->
 
-    <section id="alt-services" class="alt-services section">
+      <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <h3>{% trans "Quiénes Somos" %}</h3>
+        <p>{% trans "En ÀgoraTechAI, combinamos nuestra experiencia en agroecología con la innovación tecnológica para ofrecer soluciones de Inteligencia Artificial que transforman empresas. Nuestro enfoque está en crear herramientas que mejoren la eficiencia, aumenten la productividad y optimicen la experiencia del cliente." %}</p>
+
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-easel flex-shrink-0"></i>
+          <div>
+            <h4><a href="" class="stretched-link">{% trans "Ofrecemos" %}</a></h4>
+            <p>{% trans "Consultoría y soporte al sector público, cooperativas, asociaciones, organizaciones ESS, tejido productivo y asociativo." %}</p>
+          </div>
+        </div><!-- End Icon Box -->
+
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-patch-check flex-shrink-0"></i>
+          <div>
+            <h4><a href="" class="stretched-link">{% trans "Coordinación" %}</a></h4>
+            <p>{% trans "Gestión y acompañamiento en programas públicos y privados" %}</p>
+          </div>
+        </div><!-- End Icon Box -->
+
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+          <i class="bi bi-brightness-high flex-shrink-0"></i>
+          <div>
+            <h4><a href="" class="stretched-link">{% trans "Empirismo Práctico" %}</a></h4>
+            <p>{% trans "Programas y proyectos de investigación aplicada." %}</p>
+          </div>
+        </div><!-- End Icon Box -->
+
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+          <i class="bi bi-award"></i>
+          <div>
+            <h4><a href="" class="stretched-link">{% trans "Educación Continua" %}</a></h4>
+            <p>{% trans "Programas y proyectos educativos y de formación." %}</p>
+          </div>
+        </div><!-- End Icon Box -->
+
+      </div>
+    </div>
+  </div>
+</section><!-- /Alt Services Section -->
 
 
-      <div class="container">
 
-        <div class="row justify-content-around gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{% static 'core/img/sobre-nosotros1.jpg' %}" alt=""></div>
+    
+<section id="about" class="about section" style="margin-bottom:1rem;">
 
-          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <h3>Sobre Nosotros</h3>
-            <p>En ÀgoraTechAI, combinamos nuestra experiencia en agroecología con la innovación tecnológica para ofrecer soluciones de Inteligencia Artificial que transforman empresas. Nuestro enfoque está en crear herramientas que mejoren la eficiencia, aumenten la productividad y optimicen la experiencia del cliente.
-            </p>
+  <div class="container">
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-easel flex-shrink-0"></i>
-              <div>
-                <h4><a href="" class="stretched-link">Ofrecemos</a></h4>
-                <p>Consultoría y soporte al sector público, cooperativas, asociaciones, organizaciones ESS, tejido productivo y asociativo.</p>
-              </div>
-            </div><!-- End Icon Box -->
+    <div class="row position-relative">
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-patch-check flex-shrink-0"></i>
-              <div>
-                <h4><a href="" class="stretched-link">Coordinación</a></h4>
-                <p>Gestión y acompañamiento en programas públicos y privados</p>
-              </div>
-            </div><!-- End Icon Box -->
+      <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{% static 'core/img/about-us.jpg' %}">
+      </div>
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-brightness-high flex-shrink-0"></i>
-              <div>
-                <h4><a href="" class="stretched-link">Empirismo Práctico</a></h4>
-                <p>Programas y proyectos de investigación aplicada.</p>
-              </div>
-            </div><!-- End Icon Box -->
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="inner-title">{% trans "Nuestra Historia" %}</h2>
+        <div class="our-story">
+          <h4>{% trans "Est 1988" %}</h4>
+          <h3>ÀgoraTechAI</h3>
+          <p>
+            {% trans "es una start-up de alto impacto social con un equipo transdisciplinar experimentado y joven a la vez. Nos encontramos en fase de despliegue tecnológico, centrándonos en IA y visión por computador, en colaboración con el Computer Vision Center (CVC), del Parque Tecnológico (Universidad Autónoma de Barcelona). Nuestro objetivo es mejorar el bienestar social y la calidad de vida a través de la tecnología. Buscamos transformar los servicios para mejorar la eficiencia y el bienestar de las personas." %}
+          </p>
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-award"></i>
-              <div>
-                <h4><a href="" class="stretched-link">Educación Continua</a></h4>
-                <p>Programas y proyectos educativos y de formación.</p>
-              </div>
-            </div><!-- End Icon Box -->
-
+          <div class="watch-video d-flex align-items-center position-relative">
+            <i class="bi bi-play-circle"></i>
+            <a href="{% static 'core/videos/agora.mp4' %}" class="glightbox stretched-link">{% trans "Watch Video" %}</a>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Alt Services Section -->
-    
-    
-    
-    <section id="about" class="about section" style="margin-bottom:1rem;">
+    </div>
 
-      <div class="container">
+  </div>
 
-        <div class="row position-relative">
+</section>
 
-          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{% static 'core/img/about-us.jpg' %}"></div>
 
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="inner-title">Nuestra Historia</h2>
-            <div class="our-story">
-              <h4>Est 1988</h4>
-              <h3>ÀgoraTechAI</h3>
-              <p>
-                es una start-up de alto impacto social con un equipo transdisciplinar experimentado y joven a la vez. Nos encontramos en fase de despliegue tecnológico, centrándonos en IA y visión por computador, en colaboración con el Computer Vision Center (CVC), del Parque Tecnológico (Universidad Autónoma de Barcelona). Nuestro objetivo es mejorar el bienestar social y la calidad de vida a través de la tecnología. Buscamos transformar los servicios para mejorar la eficiencia y el bienestar de las personas.
-              </p>
-                
-              {% comment %} <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commo</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-              </ul>
-              <p>Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non nesciunt suscipit repellendus porro in quo eveniet. Molestias in maxime doloremque.</p> {% endcomment %}
-
-              <div class="watch-video d-flex align-items-center position-relative">
-                <i class="bi bi-play-circle"></i>
-                <a href="{% static 'core/videos/agora.mp4' %}" class="glightbox stretched-link">Watch Video</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
 
       <!-- PROYECTOS Section -->
 
     <!-- Page Title -->
     <div id="proyectosTitle" class="page-title dark-background"  style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
       <div class="container position-relative">
-        <h1>Casos de Éxito</h1>
+        <h1>{% trans "Casos de Éxito" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Proyectos</li>
+            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+            <li class="current">{% trans "Proyectos" %}</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-   
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
+  
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Proyectos</h2>
-        <p>
-          "Descubre cómo nuestras soluciones han ayudado a otras empresas a alcanzar sus objetivos y mejorar su rendimiento."
-        </p>
-      </div><!-- End Section Title -->
+<!-- Projects Section -->
+<section id="projects" class="projects section">
 
-      <div class="container">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>{% trans "Proyectos" %}</h2>
+    <p>
+      {% trans "Descubre cómo nuestras soluciones han ayudado a otras empresas a alcanzar sus objetivos y mejorar su rendimiento." %}
+    </p>
+  </div><!-- End Section Title -->
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  <div class="container">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Todo</li>
-            <li data-filter=".filter-suara">Suara</li>
-            <li data-filter=".filter-transcripcion">Transcripción Automática</li>
-            <li data-filter=".filter-agroecobot">AgroEcoBot</li>
-          </ul><!-- End Portfolio Filters -->
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">{% trans "Todo" %}</li>
+        <li data-filter=".filter-suara">{% trans "Suara" %}</li>
+        <li data-filter=".filter-transcripcion">{% trans "Transcripción Automática" %}</li>
+        <li data-filter=".filter-agroecobot">{% trans "AgroEcoBot" %}</li>
+      </ul><!-- End Portfolio Filters -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/IA.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Suara</h4>
-                  <p>Solución Personalizada</p>
-                  <a href="{% static 'core/img/IA.jpg' %}"  title="Solución Personalizada" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'suara' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/IA.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "Suara" %}</h4>
+              <p>{% trans "Solución Personalizada" %}</p>
+              <a href="{% static 'core/img/IA.jpg' %}" title="{% trans "Solución Personalizada" %}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'suara' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/proyecto-T-1.png' %}"  class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>STHI</h4>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/proyecto-T-1.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "STHI" %}</h4>
+              <p>{% trans "Transcripción Semi-Automática" %}</p>
+              <a href="{% static 'core/img/proyecto-T-1.png' %}" title="{% trans "Plataforma de Transcripción Semi-Automática" %}" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'sthi' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-                  <p>Transcripción Semi-Automática</p>
-                  <a href="{% static 'core/img/proyecto-T-1.png' %}"  title="Plataforma de Transcripción Semi-Automática" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'sthi' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/suara0.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "Suara" %}</h4>
+              <p>{% trans "Solución Personalizada" %}</p>
+              <a href="{% static 'core/img/suara0.jpg' %}" title="{% trans "Arquitectura Suara" %}" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'suara' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/agro-dashboard.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "AgroEcoBot" %}</h4>
+              <p>{% trans "Chatbot Inteligente experto en Agroecología con IA" %}</p>
+              <a href="{% static 'core/img/agro-dashboard.png' %}" title="{% trans "Dashboard de Control" %}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'agroecobot' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/transcripcion2.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "STHI" %}</h4>
+              <p>{% trans "Transcripción Semi-Automática" %}</p>
+              <a href="{% static 'core/img/transcripcion2.jpg' %}" title="{% trans "Documento" %}" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'sthi' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/suara0.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Suara</h4>
-                  <p>Solución Personalizada</p>
-                  <a href="{% static 'core/img/suara0.jpg' %}" title="Arquitectura Suara" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'suara' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/transcripcion3.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "STHI" %}</h4>
+              <p>{% trans "Transcripción Semi-Automática" %}</p>
+              <a href="{% static 'core/img/transcripcion3.jpg' %}" title="{% trans "Branding 2" %}" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'sthi' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/agro-dashboard.png' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>AgroEcoBot</h4>
-                  <p>Chatbot Inteligente experto en Agroecología con IA</p>
-                  <a href="{% static 'core/img/agro-dashboard.png' %}" title="Dashboard de Control" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'agroecobot' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/suara2.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "Suara" %}</h4>
+              <p>{% trans "Solución Personalizada" %}</p>
+              <a href="{% static 'core/img/suara2.png' %}" title="{% trans "Chatbot de ayuda" %}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'suara' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/transcripcion2.jpg' %}"  class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>STHI</h4>
-                  <p>Transcripción Semi-Automática</p>
-                  <a href="{% static 'core/img/transcripcion2.jpg' %}" title="Documento" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'sthi' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/logo-suara.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "Suara" %}</h4>
+              <p>{% trans "Solución Personalizada" %}</p>
+              <a href="{% static 'core/img/logo-suara.png' %}" title="{% trans "Product 3" %}" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'suara' %}" title="{% trans "Suara" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-transcripcion">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/transcripcion3.jpg' %}"  class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>STHI</h4>
-                  <p>Transcripción Semi-Automática</p>
-                  <a href="{% static 'core/img/transcripcion3.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'sthi' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'core/img/agroecobot3.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{% trans "AgroEcoBot" %}</h4>
+              <p>{% trans "Chatbot Inteligente experto en Agroecología con IA" %}</p>
+              <a href="{% static 'core/img/agroecobot3.png' %}" title="{% trans "AgroEcoBot" %}" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'agroecobot' %}" title="{% trans "More Details" %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
 
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/suara2.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Suara</h4>
-                  <p>Solución Personalizada</p>
-                  <a href="{% static 'core/img/suara2.jpg' %}" title="Chatbot de ayuda" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'suara' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-suara">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/logo-suara.png' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Suara</h4>
-                  <p>Solución Personalizada</p>
-                  <a href="{% static 'core/img/logo-suara.png' %}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'suara' %}" title="Suara" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agroecobot">
-              <div class="portfolio-content h-100">
-                <img src="{% static 'core/img/agroecobot3.png' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>AgroEcoBot</h4>
-                  <p>Chatbot Inteligente experto en Agroecología con IA</p>
-                  <a href="{% static 'core/img/agroecobot3.png' %}" title="AgroEcoBot" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="{% url 'agroecobot' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+            {% comment %} <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
               <div class="portfolio-content h-100">
                 <img src="assets/img/projects/repairs-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -613,9 +610,9 @@
                   <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item --> {% endcomment %}
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+            {% comment %} <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
               <div class="portfolio-content h-100">
                 <img src="assets/img/projects/design-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -625,7 +622,7 @@
                   <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item --> {% endcomment %}
 
           </div><!-- End Portfolio Container -->
 
@@ -648,96 +645,96 @@
         </div>
         </div><!-- End Page Title --> {% endcomment %}
 
+        <section id="contact" class="contact section">
 
-    <section id="contact" class="contact section">
-
-      <!-- Page Title -->
-      <div id="contactoTitle" class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
-        <div class="container position-relative">
-          <h1> Transformemos Juntos tu Negocio</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li class="current">Contacto</li>
-            </ol>
-          </nav>
-        </div>
-        </div>
-
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="pt-4 row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Barcelona</h3>
-              <p>Ca n'Andalet - La Innobadora
-                Pasaje Andalet, 11
-                08032 Barcelona</p>
+          <!-- Page Title -->
+          <div id="contactoTitle" class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
+            <div class="container position-relative">
+              <h1>{% trans "Transformemos Juntos tu Negocio" %}</h1>
+              <nav class="breadcrumbs">
+                <ol>
+                  <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                  <li class="current">{% trans "Contacto" %}</li>
+                </ol>
+              </nav>
             </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Llamanos</h3>
-              <p>Tel. 640720857</p>
+          </div><!-- End Page Title -->
+        
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+            <div class="pt-4 row gy-4">
+        
+              <div class="col-lg-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>{% trans "Barcelona" %}</h3>
+                  <p>Ca n'Andalet - La Innobadora<br>
+                     Pasaje Andalet, 11<br>
+                     08032 Barcelona</p>
+                </div>
+              </div><!-- End Info Item -->
+        
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>{% trans "Llámanos" %}</h3>
+                  <p>Tel. 640720857</p>
+                </div>
+              </div><!-- End Info Item -->
+        
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>{% trans "Escríbenos" %}</h3>
+                  <p>hola@agoradelaterra.cat</p>
+                </div>
+              </div><!-- End Info Item -->
+        
             </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Escribenos</h3>
-              <p>hola@agoradelaterra.cat</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="map-responsive">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4230.747337358024!2d2.150614381175003!3d41.42641515908719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd51eb38ad5b%3A0x549ac04b5b279eb4!2sCa%20n&#39;Andalet%20-%20Barcelona%20Activa!5e0!3m2!1ses!2ses!4v1722862117056!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
-        </div>
-
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-          <form id="contact-form" method="post" action="#contact-success" class="php-email-form">
-              {% csrf_token %}
-              <div class="row gy-4">
-                  <div class="col-md-6">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-md-6">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                  </div>
-                  <div class="col-md-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                  </div>
-                  <div class="col-md-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                  </div>
-                  <div class="col-md-12 text-center">
-                      <button type="submit">ENVIAR</button>
-                  </div>
+        
+            <div class="row gy-4 mt-1">
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4230.747337358024!2d2.150614381175003!3d41.42641515908719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd51eb38ad5b%3A0x549ac04b5b279eb4!2sCa%20n&#39;Andalet%20-%20Barcelona%20Activa!5e0!3m2!1ses!2ses!4v1722862117056!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><!-- End Google Maps -->
               </div>
-          </form>
-          {% if success %}
-          <p class="sent-message" style="display: block;">Your message has been sent. Thank you!</p>
-          {% elif not success and form.errors %}
-          <p class="error-message" style="display: block;">There was an error in your form submission. Please correct the errors and try again.</p>
-          {% endif %}
-      </div>
+        
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <form id="contact-form" method="post" action="#contact-success" class="php-email-form">
+                  {% csrf_token %}
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <input type="text" name="name" class="form-control" placeholder="{% trans 'Your Name' %}" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" class="form-control" name="email" placeholder="{% trans 'Your Email' %}" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" class="form-control" name="subject" placeholder="{% trans 'Subject' %}" required>
+                    </div>
+                    <div class="col-md-12">
+                      <textarea class="form-control" name="message" rows="6" placeholder="{% trans 'Message' %}" required></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button type="submit">{% trans "ENVIAR" %}</button>
+                    </div>
+                  </div>
+                </form>
+                {% if success %}
+                <p class="sent-message" style="display: block;">{% trans "Your message has been sent. Thank you!" %}</p>
+                {% elif not success and form.errors %}
+                <p class="error-message" style="display: block;">{% trans "There was an error in your form submission. Please correct the errors and try again." %}</p>
+                {% endif %}
+              </div>
+        
+            </div>
+        
+          </div>
+        
+        </section>
 
-        </div>
+        
 
-      </div>
-
-      </section>
       <!-- /Contact Section -->
 
 
@@ -1002,33 +999,33 @@
       <div class="col-md-4 footer-links">
         <h4>ÀgoraTechAI</h4>
         <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#technologies">Tecnologías</a></li>
-          <li><a href="#sobreNosotrosTitle">Nosotros</a></li>
-          <li><a href="#proyectosTitle">Proyectos</a></li>
-          <li><a href="#contactoTitle">Contacto</a></li>
+          <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+          <li><a href="#services">{% trans "Servicios" %}</a></li>
+          <li><a href="#technologies">{% trans "Tecnologías" %}</a></li>
+          <li><a href="#sobreNosotrosTitle">{% trans "Nosotros" %}</a></li>
+          <li><a href="#proyectosTitle">{% trans "Proyectos" %}</a></li>
+          <li><a href="#contactoTitle">{% trans "Contacto" %}</a></li>
         </ul>
       </div>
 
       <div class="col-md-4 footer-links">
-        <h4>Our Services</h4>
+        <h4>{% trans "Nuestros Servicios" %}</h4>
         <ul>
-          <li><a href="#services">Chatbots Inteligentes con IA</a></li>
-          <li><a href="#services">Transcripción Automática</a></li>
-          <li><a href="#services">Soluciones Personalizadas</a></li>
-          <li><a href="#services">Asistentes Virtuales</a></li>
+          <li><a href="#services">{% trans "Chatbots Inteligentes con IA" %}</a></li>
+          <li><a href="#services">{% trans "Transcripción Automática" %}</a></li>
+          <li><a href="#services">{% trans "Soluciones Personalizadas" %}</a></li>
+          <li><a href="#services">{% trans "Asistentes Virtuales" %}</a></li>
         </ul>
       </div>
 
       <div class="col-md-4 footer-about">
-        <h4>Contact Us</h4>
+        <h4>{% trans "Contáctanos" %}</h4>
         <p>Ca n'Andalet - La Innobadora</p>
         <p>Pasaje Andalet, 11</p>
         <p class="mt-3">
-          <strong>Telefono:</strong> <span>+34 640 720 857</span>
+          <strong>{% trans "Teléfono:" %}</strong> <span>+34 640 720 857</span>
         </p>
-        <p><strong>Correo:</strong> <span>hola@agoradelaterra.cat</span></p>
+        <p><strong>{% trans "Correo:" %}</strong> <span>hola@agoradelaterra.cat</span></p>
         <div class="social-links d-flex mt-4">
           <a href="https://x.com/i/flow/login?redirect_after_login=%2FAgoradelaterra"><i class="bi bi-twitter"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61552773127247"><i class="bi bi-facebook"></i></a>

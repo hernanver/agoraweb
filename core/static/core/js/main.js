@@ -170,3 +170,17 @@
 
 
 // Animcion seccion
+document.addEventListener("DOMContentLoaded", function() {
+  const animateMe = document.getElementById("animateMe");
+  animateMe.querySelectorAll("span").forEach(wordSpan => {
+      const word = wordSpan.innerText;
+      wordSpan.innerHTML = "";  // Clear the text content
+      word.split("").forEach((char, index) => {
+          const charSpan = document.createElement("span");
+          charSpan.innerText = char;
+          charSpan.style.animationDelay = `${index * 0.1}s`;  // Adjust delay for each letter
+          wordSpan.appendChild(charSpan);
+      });
+  });
+});
+

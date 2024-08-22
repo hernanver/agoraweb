@@ -1,80 +1,70 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
+<main class="main">
 
+  <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
+    <div class="container position-relative">
+      <h1>{% trans "Plataforma de Transcripción Semi-Automática" %}</h1>
 
-  <main class="main">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+          <li class="current">{% trans "STHI" %}</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
-      <div class="container position-relative">
-        <h1>Plataforma de Transcripción Semi-Automática</h1>
+  <!-- Service Details Section -->
+  <section id="service-details" class="service-details section">
 
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">STHI</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+    <div class="container">
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+      <div class="row gy-4">
 
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <a href="#" class="active">Características Clave de la STHI</a>
-              <a href="#">Innovación y tecnología con la STHI:</a>
-              <a href="#">¿Quién puede utilizarla?</a>
-              <a href="#">Producción y prestación del Servicio de Transcripción Histórica</a>
-              <a href="#">Control de calidad en cada fase</a>
-            </div>
-
-            <h4>Impacto y beneficios de la STHI</h4>
-            <p>Reducimos significativamente el tiempo de transcripción. Lo que tradicionalmente podría llevar meses, nosotros lo realizamos en días gracias a la integración de la IA. Combinando la eficiencia de la IA con la precisión humana, asegurando transcripciones de alta calidad.</p>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a href="#" class="active">{% trans "Características Clave de la STHI" %}</a>
+            <a href="#">{% trans "Innovación y tecnología con la STHI" %}</a>
+            <a href="#">{% trans "¿Quién puede utilizarla?" %}</a>
+            <a href="#">{% trans "Producción y prestación del Servicio de Transcripción Histórica" %}</a>
+            <a href="#">{% trans "Control de calidad en cada fase" %}</a>
           </div>
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="{% static 'core/img/proyecto-T-1.png' %}" alt="" class="img-fluid services-img">
-            <h3>Plataforma Semi-Asistida de Transcripción Histórica Inteligente (STHI)</h3>
-            <p>
-              Representa un avance pionero en la transcripción de documentos históricos, fusionando la Inteligencia Artificial (IA) más avanzada con la interacción humana experta. Este enfoque híbrido no sólo optimiza la eficiencia y precisión en la transcripción de escrituras antiguas, sino que también redefine el proceso de digitalización a gran escala.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Inteligencia Artificial avanzada : Utilizamos algoritmos de vanguardia en procesamiento de lenguaje natural y visión por ordenador, capaces de reconocer y transcribir de forma precisa textos manuscritos históricos.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Interfaz intuitiva y amigable : Nuestra plataforma proporciona una experiencia de usuario fluida, permitiendo la carga, visualización y corrección de transcripciones automáticas con facilidad y eficacia.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Edición colaborativa enriquecida: Facilitamos un espacio colaborativo en el que historiadores y expertos en paleografía pueden aportar sus conocimientos, mejorando así la calidad de las transcripciones.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Historial de revisiones detallado: Mantenemos un registro exhaustivo de todas las modificaciones, asegurando transparencia y facilidad en la supervisión y auditoría de los documentos.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Aprendizaje continuo de la IA: Nuestra IA se perfecciona constantemente, adaptándose y mejorando su precisión con cada interacción y feedback de los usuarios.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Herramientas de gestión de proyectos : Ofrecemos soluciones para la administración eficiente de proyectos de transcripción a gran escala, asegurando una óptima organización y distribución de los documentos.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Exportación y almacenamiento seguro : Proveemos opciones robustas para la exportación y almacenamiento seguro de transcripciones y documentos originales.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Máxima seguridad y protección de datos: Conscientes de la sensibilidad de los documentos históricos, garantizamos las medidas más estrictas de seguridad y protección de datos.</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
-          </div>
-          <div class="text-center mt-4">
-            <a href="{% url 'home' %}#contact" class="btn-get-started-2">Solicita una Consulta Gratuita</a>
-          </div>
-          
+          <h4>{% trans "Impacto y Beneficios de la STHI" %}</h4>
+          <p>{% trans "Reducimos significativamente el tiempo de transcripción. Lo que tradicionalmente podría llevar meses, nosotros lo realizamos en días gracias a la integración de la IA. Combinando la eficiencia de la IA con la precisión humana, aseguramos transcripciones de alta calidad." %}</p>
+        </div>
 
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'core/img/proyecto-T-1.png' %}" alt="" class="img-fluid services-img">
+          <h3>{% trans "Plataforma Semi-Asistida de Transcripción Histórica Inteligente (STHI)" %}</h3>
+          <p>{% trans "Representa un avance pionero en la transcripción de documentos históricos, fusionando la Inteligencia Artificial (IA) más avanzada con la interacción humana experta. Este enfoque híbrido no solo optimiza la eficiencia y precisión en la transcripción de escrituras antiguas, sino que también redefine el proceso de digitalización a gran escala." %}</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Inteligencia Artificial avanzada: Utilizamos algoritmos de vanguardia en procesamiento de lenguaje natural y visión por ordenador, capaces de reconocer y transcribir de forma precisa textos manuscritos históricos." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Interfaz intuitiva y amigable: Nuestra plataforma proporciona una experiencia de usuario fluida, permitiendo la carga, visualización y corrección de transcripciones automáticas con facilidad y eficacia." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Edición colaborativa enriquecida: Facilitamos un espacio colaborativo en el que historiadores y expertos en paleografía pueden aportar sus conocimientos, mejorando así la calidad de las transcripciones." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Historial de revisiones detallado: Mantenemos un registro exhaustivo de todas las modificaciones, asegurando transparencia y facilidad en la supervisión y auditoría de los documentos." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Aprendizaje continuo de la IA: Nuestra IA se perfecciona constantemente, adaptándose y mejorando su precisión con cada interacción y feedback de los usuarios." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Herramientas de gestión de proyectos: Ofrecemos soluciones para la administración eficiente de proyectos de transcripción a gran escala, asegurando una óptima organización y distribución de los documentos." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Exportación y almacenamiento seguro: Proveemos opciones robustas para la exportación y almacenamiento seguro de transcripciones y documentos originales." %}</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>{% trans "Máxima seguridad y protección de datos: Conscientes de la sensibilidad de los documentos históricos, garantizamos las medidas más estrictas de seguridad y protección de datos." %}</span></li>
+          </ul>
+        </div>
+        <div class="text-center mt-4">
+          <a href="{% url 'home' %}#contact" class="btn-get-started-2">{% trans "Solicita una Consulta Gratuita" %}</a>
         </div>
 
       </div>
 
-    </section><!-- /Service Details Section -->
+    </div>
 
-  </main>
+  </section><!-- /Service Details Section -->
 
-  {% endblock %}
+</main>
+
+{% endblock %}

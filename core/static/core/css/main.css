@@ -898,6 +898,11 @@ section,
   .hero .info h2 {
     font-size: 36px;
   }
+  .hero .info p {
+
+    font-size: 10px;
+}
+
 }
 
 .hero .info p {
@@ -3002,79 +3007,20 @@ section,
 
 
 /* ANIME SECCIONES */
-#animateMe span {
+#animateMe span span {
   display: inline-block;
   font-size: 2rem;
   animation: wave-text 1.4s ease-in-out infinite;
 }
 
-#animateMe span:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-#animateMe span:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-#animateMe span:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-#animateMe span:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-#animateMe span:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
-#animateMe span:nth-child(7) {
-  animation-delay: 0.6s;
-}
-#animateMe span:nth-child(8) {
-  animation-delay: 0.7s;
-}
-#animateMe span:nth-child(9) {
-  animation-delay: 0.8s;
-}
-#animateMe span:nth-child(10) {
-  animation-delay: 0.9s;
-}
-#animateMe span:nth-child(11) {
-  animation-delay: 0.10s;
-}
-#animateMe span:nth-child(12) {
-  animation-delay: 0.11s;
-}
-#animateMe span:nth-child(13) {
-  animation-delay: 0.12s;
-}
-#animateMe span:nth-child(14) {
-  animation-delay: 0.13s;
-}
-#animateMe span:nth-child(15) {
-  animation-delay: 0.14s;
-}
-#animateMe span:nth-child(16) {
-  animation-delay: 0.15s;
-}
-#animateMe span:nth-child(14) {
-  animation-delay: 0.13s;
-}
-/* Continúa con el resto de las letras, ajustando el retraso según sea necesario */
-
 @keyframes wave-text {
-  0% {
-    transform: translateY(0rem);
+  0%, 100% {
+    transform: translateY(0);
   }
-  55% {
-    transform: translateY(-1.5rem);
-  }
-  100% {
-    transform: translateY(0rem);
+  50% {
+    transform: translateY(-10px);
   }
 }
-
 
 
 /*  */
@@ -3151,3 +3097,30 @@ section,
   }
 }
 
+
+
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher .nav-link {
+  padding: 10px;
+  color: var(--nav-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .language-switcher {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+  }
+
+  .language-switcher .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}

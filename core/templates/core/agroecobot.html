@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -8,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background" style="background-image: url({% static 'core/img/ia-portada.jpg' %});">
       <div class="container position-relative">
-        <h1>AgroEcoBot</h1>
+        <h1>{% trans "AgroEcoBot" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">AgroEcoBot</li>
+            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+            <li class="current">{% trans "AgroEcoBot" %}</li>
           </ol>
         </nav>
       </div>
@@ -28,54 +29,54 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
               <div class="icon mb-2"><i class="fas fa-leaf fa-3x" style="color: #16BAC5;"></i></div>
-              <h4 class="mt-3">Preguntas Frecuentes</h4>
-              <p>Responde preguntas sobre prácticas de agroecología, consejos de cultivo sostenible y manejo de suelos y recursos.</p>
+              <h4 class="mt-3">{% trans "Preguntas Frecuentes" %}</h4>
+              <p>{% trans "Responde preguntas sobre prácticas de agroecología, consejos de cultivo sostenible y manejo de suelos y recursos." %}</p>
             </div>
             <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
               <div class="icon mb-2"><i class="fas fa-gavel fa-3x" style="color: #16BAC5;"></i></div>
-              <h4 class="mt-3">Normativas y Regulaciones</h4>
-              <p>Explica normativas afectando actividades de sanidad, trámites municipales, DACC y certificación ecológica.</p>
+              <h4 class="mt-3">{% trans "Normativas y Regulaciones" %}</h4>
+              <p>{% trans "Explica normativas afectando actividades de sanidad, trámites municipales, DACC y certificación ecológica." %}</p>
             </div>
             <div class="highlight-box mb-4 p-4 text-center border rounded shadow-sm">
               <div class="icon mb-2"><i class="fas fa-address-book fa-3x" style="color: #16BAC5;"></i></div>
-              <h4 class="mt-3">Registro de Contactos</h4>
-              <p>Registra contactos para asistencia técnica futura y recoge información adicional.</p>
+              <h4 class="mt-3">{% trans "Registro de Contactos" %}</h4>
+              <p>{% trans "Registra contactos para asistencia técnica futura y recoge información adicional." %}</p>
             </div>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <img src="{% static 'core/img/agroecobot.jpg' %}" alt="" class="img-fluid mb-4 rounded shadow-sm">
-            <h3>AgroEcoBot: Asistente Virtual para la Agroecología</h3>
-            <p>AgroEcoBot es un chatbot alimentado por IA diseñado para responder preguntas frecuentes sobre prácticas de agroecología, consejos de cultivo sostenible, y recomendaciones de manejo de suelos y recursos. Además, asiste a personas interesadas en la transformación de alimentos, explicando normativas y procesos necesarios.</p>
+            <h3>{% trans "AgroEcoBot: Asistente Virtual para la Agroecología" %}</h3>
+            <p>{% trans "AgroEcoBot es un chatbot alimentado por IA diseñado para responder preguntas frecuentes sobre prácticas de agroecología, consejos de cultivo sostenible, y recomendaciones de manejo de suelos y recursos. Además, asiste a personas interesadas en la transformación de alimentos, explicando normativas y procesos necesarios." %}</p>
             <ul class="list-unstyled">
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Prácticas de Agroecología: Proporciona consejos sobre cultivo sostenible y manejo de suelos y recursos.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Transformación de Alimentos: Asiste a productores artesanales e industriales en la normativa aplicable.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Normativas: Explica normativas en temas de sanidad, trámites municipales, DACC y certificación ecológica.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Registro de Contactos: Registra información para asistencia técnica futura y recoge datos adicionales.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Interfaz Amigable: Fácil de usar, permitiendo una interacción fluida y eficaz.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Aprendizaje Automático: Mejora continuamente sus capacidades mediante la interacción y el feedback de los usuarios.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Plataforma Segura e Inclusiva: Garantiza un entorno seguro, protegiendo la privacidad y datos de los usuarios.</span></li>
-              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>Dashboard de Control: Acceso a las conversaciones y mensajes para seguimiento y análisis.</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Prácticas de Agroecología: Proporciona consejos sobre cultivo sostenible y manejo de suelos y recursos." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Transformación de Alimentos: Asiste a productores artesanales e industriales en la normativa aplicable." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Normativas: Explica normativas en temas de sanidad, trámites municipales, DACC y certificación ecológica." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Registro de Contactos: Registra información para asistencia técnica futura y recoge datos adicionales." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Interfaz Amigable: Fácil de usar, permitiendo una interacción fluida y eficaz." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Aprendizaje Automático: Mejora continuamente sus capacidades mediante la interacción y el feedback de los usuarios." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Plataforma Segura e Inclusiva: Garantiza un entorno seguro, protegiendo la privacidad y datos de los usuarios." %}</span></li>
+              <li class="d-flex align-items-start mb-3"><i class="bi bi-check-circle"></i> <span>{% trans "Dashboard de Control: Acceso a las conversaciones y mensajes para seguimiento y análisis." %}</span></li>
             </ul>
             
             <!-- Image Gallery -->
             <div class="gallery mt-4">
-              <h4 class="mb-3">Galería de Imágenes</h4>
+              <h4 class="mb-3">{% trans "Galería de Imágenes" %}</h4>
               <div class="row">
                 <div class="col-md-4 mb-4">
-                  <img src="{% static 'core/img/agroecobot1.png' %}" alt="Gallery Image 1" class="img-fluid rounded shadow-sm">
+                  <img src="{% static 'core/img/agroecobot1.png' %}" alt="{% trans "Gallery Image 1" %}" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-4 mb-4">
-                  <img src="{% static 'core/img/agroecobot2.png' %}" alt="Gallery Image 2" class="img-fluid rounded shadow-sm">
+                  <img src="{% static 'core/img/agroecobot2.png' %}" alt="{% trans "Gallery Image 2" %}" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-4 mb-4">
-                  <img src="{% static 'core/img/agro-dashboard.png' %}" alt="Gallery Image 3" class="img-fluid rounded shadow-sm">
+                  <img src="{% static 'core/img/agro-dashboard.png' %}" alt="{% trans "Gallery Image 3" %}" class="img-fluid rounded shadow-sm">
                 </div>
               </div>
             </div>
             
             <div class="text-center mt-4">
-                <a href="{% url 'home' %}#contact" class="btn-get-started-2">Solicita una Consulta Gratuita</a>
+                <a href="{% url 'home' %}#contact" class="btn-get-started-2">{% trans "Solicita una Consulta Gratuita" %}</a>
             </div>
           </div>
 

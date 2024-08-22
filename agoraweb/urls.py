@@ -1,27 +1,38 @@
-"""
-URL configuration for agoraweb project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-
+from django.conf.urls.i18n import i18n_patterns
+from core.views import redirect_root_to_language  # Importa la vista que creaste
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include('core.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('set-language/', include('django.conf.urls.i18n')),  # Ruta funcional para cambiar el idioma
+    path('', redirect_root_to_language),  # Redirigir la raíz al idioma predeterminado
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += i18n_patterns(
+    path("", include('core.urls')),  # Internacionaliza las rutas de la aplicación principal
+    # Otras rutas que deberían estar internacionalizadas...
+)
+from django.urls import get_resolver
+
+for url_pattern in get_resolver().url_patterns:
+    print(url_pattern)
+
+
+# from django.contrib import admin
+# from django.urls import path, include
+# from django.conf import settings
+# from django.conf.urls.static import static
+# from django.conf.urls.i18n import i18n_patterns
+
+# urlpatterns = [
+#     path("admin/", admin.site.urls),
+#     path('set-language/', include('django.conf.urls.i18n')),  
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# urlpatterns += i18n_patterns(
+#     path("", include('core.urls')),  
+
+# )

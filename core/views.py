@@ -34,3 +34,13 @@ class SuaraPageView(TemplateView):
 
 class AgroecobotPageView(TemplateView):
     template_name = "core/agroecobot.html"
+
+
+
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.utils import translation
+
+def redirect_root_to_language(request):
+    language = translation.get_language() or 'es'  # Idioma predeterminado
+    return HttpResponseRedirect(f'/{language}/')
