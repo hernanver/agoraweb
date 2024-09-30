@@ -564,6 +564,10 @@ msgstr "Educacio continua"
 msgid "Programas y proyectos educativos y de formación."
 msgstr "Programes i projectes educatius i de formació."
 
+#: core/templates/core/home.html:441
+msgid "Mirar Video"
+msgstr "Watch Video"
+
 #: core/templates/core/home.html:444
 msgid "Nuestra Historia"
 msgstr "La Nostra Història"
