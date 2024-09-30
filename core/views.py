@@ -20,22 +20,21 @@ class HomePageView(TemplateView):
         # Obtener el idioma actual
         language = get_language()
 
-        # Determinar la ruta del video según el idioma
+        # Determinar la URL del video según el idioma (en Google Drive con preview)
         if language == 'ca':
-            video_url = static('core/videos/video-catalan.mp4')
+            video_url = 'https://drive.google.com/file/d/1_4kyLp78suRHMquJ0OPTUK735p7Z8lJJ/preview'
         elif language == 'es':
-            video_url = static('core/videos/video-castellano.mp4')
+            video_url = 'https://drive.google.com/file/d/1hp6-BDGofn5Ln5-XcXM4CiEvupJCIodW/preview'
         elif language == 'en':
-            video_url = static('core/videos/video-ingles.mp4')
+            video_url = 'https://drive.google.com/file/d/18ZzCjclsHuTiOwoJzNJoNnyZHgacK8OV/preview'
         else:
-            video_url = static('core/videos/video-castellano.mp4')  # Video por defecto
+            video_url = 'https://drive.google.com/file/d/1hp6-BDGofn5Ln5-XcXM4CiEvupJCIodW/preview'  # Por defecto español
 
         # Pasar la URL del video al contexto
         context['video_url'] = video_url
 
         return context
 
-        return context
 
     def post(self, request, *args, **kwargs):
         form = ContactForm(request.POST)
