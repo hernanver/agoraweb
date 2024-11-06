@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 08:28+0000\n"
+"POT-Creation-Date: 2024-11-06 09:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: core/templates/core/agroecobot.html:12
-#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:503
-#: core/templates/core/home.html:548 core/templates/core/home.html:608
-#: core/templates/core/home.html:610
+#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:528
+#: core/templates/core/home.html:573 core/templates/core/home.html:633
+#: core/templates/core/home.html:635
 msgid "AgroEcoBot"
 msgstr ""
 
 #: core/templates/core/agroecobot.html:15 core/templates/core/base.html:169
-#: core/templates/core/home.html:375 core/templates/core/home.html:475
-#: core/templates/core/home.html:672 core/templates/core/home.html:1020
+#: core/templates/core/home.html:362 core/templates/core/home.html:465
+#: core/templates/core/home.html:673 core/templates/core/home.html:1021
 #: core/templates/core/sthi-details.html:16 core/templates/core/suara.html:15
 msgid "Home"
 msgstr "Inici"
@@ -53,7 +53,8 @@ msgid ""
 "Explica normativas afectando actividades de sanidad, trámites municipales, "
 "DACC y certificación ecológica."
 msgstr ""
-"Explica normatives en temes de sanitat, tràmits municipals, DACC i certificació ecològica."
+"Explica normatives en temes de sanitat, tràmits municipals, DACC i "
+"certificació ecològica."
 
 #: core/templates/core/agroecobot.html:42
 msgid "Registro de Contactos"
@@ -64,7 +65,8 @@ msgid ""
 "Registra contactos para asistencia técnica futura y recoge información "
 "adicional."
 msgstr ""
-"Enregistra informació per a assistència tècnica futura i recull dades addicionals."
+"Enregistra informació per a assistència tècnica futura i recull dades "
+"addicionals."
 
 #: core/templates/core/agroecobot.html:49
 msgid "AgroEcoBot: Asistente Virtual para la Agroecología"
@@ -81,7 +83,8 @@ msgstr ""
 "AgroEcoBot és un chatbot alimentat per IA dissenyat per respondre preguntes "
 "freqüents sobre pràctiques d'agroecologia, consells de cultiu sostenible i "
 "recomanacions de maneig de terres i recursos. A més, assisteix persones "
-"interessades en la transformació d'aliments, explicant normatives i processos necessaris."
+"interessades en la transformació d'aliments, explicant normatives i "
+"processos necessaris."
 
 #: core/templates/core/agroecobot.html:52
 msgid ""
@@ -96,24 +99,24 @@ msgid ""
 "Transformación de Alimentos: Asiste a productores artesanales e industriales "
 "en la normativa aplicable."
 msgstr ""
-"Transformació d'Aliments: Assisteix a productors artesanals i industrials"
-" en la normativa aplicable."
+"Transformació d'Aliments: Assisteix a productors artesanals i industrials en "
+"la normativa aplicable."
 
 #: core/templates/core/agroecobot.html:54
 msgid ""
 "Normativas: Explica normativas en temas de sanidad, trámites municipales, "
 "DACC y certificación ecológica."
 msgstr ""
-"Normatives: Explica normatives en temes de sanitat, tràmits municipals, "
-"DACC i certificació ecològica."
+"Normatives: Explica normatives en temes de sanitat, tràmits municipals, DACC "
+"i certificació ecològica."
 
 #: core/templates/core/agroecobot.html:55
 msgid ""
 "Registro de Contactos: Registra información para asistencia técnica futura y "
 "recoge datos adicionales."
 msgstr ""
-"Registres de Contactes: Enregistra informació per a assistència tècnica futura i "
-"recull dades addicionals."
+"Registres de Contactes: Enregistra informació per a assistència tècnica "
+"futura i recull dades addicionals."
 
 #: core/templates/core/agroecobot.html:56 core/templates/core/suara.html:54
 msgid ""
@@ -128,8 +131,8 @@ msgid ""
 "Aprendizaje Automático: Mejora continuamente sus capacidades mediante la "
 "interacción y el feedback de los usuarios."
 msgstr ""
-"Aprenentatge Automàtic: millora contínuament les seves capacitats mitjançant"
-" la interacció i el feedback dels usuaris."
+"Aprenentatge Automàtic: millora contínuament les seves capacitats mitjançant "
+"la interacció i el feedback dels usuaris."
 
 #: core/templates/core/agroecobot.html:58
 msgid ""
@@ -144,8 +147,8 @@ msgid ""
 "Dashboard de Control: Acceso a las conversaciones y mensajes para "
 "seguimiento y análisis."
 msgstr ""
-"Dashboard de Control: Accés a les converses i missatges per a "
-"seguiment i anàlisi."
+"Dashboard de Control: Accés a les converses i missatges per a seguiment i "
+"anàlisi."
 
 #: core/templates/core/agroecobot.html:64 core/templates/core/suara.html:62
 msgid "Galería de Imágenes"
@@ -163,71 +166,71 @@ msgstr "Imatge 2"
 msgid "Gallery Image 3"
 msgstr "Imatge 3"
 
-#: core/templates/core/agroecobot.html:79 core/templates/core/home.html:155
+#: core/templates/core/agroecobot.html:79 core/templates/core/home.html:142
 #: core/templates/core/sthi-details.html:59 core/templates/core/suara.html:77
 msgid "Solicita una Consulta Gratuita"
 msgstr "Sol·licita una Consulta Gratuïta"
 
 #: core/templates/core/base.html:76 core/templates/core/base.html:170
-#: core/templates/core/home.html:66 core/templates/core/home.html:1021
+#: core/templates/core/home.html:66 core/templates/core/home.html:1022
 msgid "Servicios"
 msgstr "Serveis"
 
 #: core/templates/core/base.html:77 core/templates/core/base.html:171
-#: core/templates/core/home.html:67 core/templates/core/home.html:1022
+#: core/templates/core/home.html:67 core/templates/core/home.html:1023
 msgid "Tecnologías"
 msgstr "Tecnologies"
 
 #: core/templates/core/base.html:78 core/templates/core/base.html:172
-#: core/templates/core/home.html:68 core/templates/core/home.html:1023
+#: core/templates/core/home.html:68 core/templates/core/home.html:1024
 msgid "Nosotros"
 msgstr "Nosaltres"
 
 #: core/templates/core/base.html:79 core/templates/core/base.html:173
-#: core/templates/core/home.html:69 core/templates/core/home.html:476
-#: core/templates/core/home.html:489 core/templates/core/home.html:1024
+#: core/templates/core/home.html:69 core/templates/core/home.html:466
+#: core/templates/core/home.html:514 core/templates/core/home.html:1025
 msgid "Proyectos"
 msgstr "Projectes"
 
 #: core/templates/core/base.html:80 core/templates/core/base.html:174
-#: core/templates/core/home.html:70 core/templates/core/home.html:673
-#: core/templates/core/home.html:1025
+#: core/templates/core/home.html:70 core/templates/core/home.html:674
+#: core/templates/core/home.html:1026
 msgid "Contacto"
 msgstr "Contacte"
 
-#: core/templates/core/base.html:179 core/templates/core/home.html:198
-#: core/templates/core/home.html:1030
+#: core/templates/core/base.html:179 core/templates/core/home.html:185
+#: core/templates/core/home.html:1031
 msgid "Nuestros Servicios"
 msgstr "Els Nostres Serveis"
 
-#: core/templates/core/base.html:181 core/templates/core/home.html:1032
+#: core/templates/core/base.html:181 core/templates/core/home.html:1033
 msgid "Chatbots Inteligentes con IA"
 msgstr "Chatbots Intel·ligents"
 
-#: core/templates/core/base.html:182 core/templates/core/home.html:209
-#: core/templates/core/home.html:502 core/templates/core/home.html:1033
+#: core/templates/core/base.html:182 core/templates/core/home.html:196
+#: core/templates/core/home.html:527 core/templates/core/home.html:1034
 msgid "Transcripción Automática"
 msgstr "Transcripció Automàtica"
 
-#: core/templates/core/base.html:183 core/templates/core/home.html:224
-#: core/templates/core/home.html:1034
+#: core/templates/core/base.html:183 core/templates/core/home.html:211
+#: core/templates/core/home.html:1035
 msgid "Soluciones Personalizadas"
 msgstr "Solucions Personalitzades"
 
-#: core/templates/core/base.html:184 core/templates/core/home.html:214
-#: core/templates/core/home.html:1035
+#: core/templates/core/base.html:184 core/templates/core/home.html:201
+#: core/templates/core/home.html:1036
 msgid "Asistentes Virtuales"
 msgstr "Assistents Virtuals"
 
-#: core/templates/core/base.html:189 core/templates/core/home.html:1040
+#: core/templates/core/base.html:189 core/templates/core/home.html:1041
 msgid "Contáctanos"
 msgstr "Contacte"
 
-#: core/templates/core/base.html:193 core/templates/core/home.html:1044
+#: core/templates/core/base.html:193 core/templates/core/home.html:1045
 msgid "Teléfono:"
 msgstr ""
 
-#: core/templates/core/base.html:195 core/templates/core/home.html:1046
+#: core/templates/core/base.html:195 core/templates/core/home.html:1047
 msgid "Correo:"
 msgstr ""
 
@@ -259,8 +262,7 @@ msgstr "amb"
 msgid "IA"
 msgstr "IA"
 
-
-#: core/templates/core/home.html:200
+#: core/templates/core/home.html:187
 msgid ""
 "Descubre cómo nuestras soluciones de IA pueden transformar tu organización. "
 "Estamos especializados en una variedad de servicios diseñados para "
@@ -270,15 +272,15 @@ msgstr ""
 "organització. Estem especialitzats en una varietat de serveis dissenyats per "
 "a satisfer les teves necessitats específiques."
 
-#: core/templates/core/home.html:219
+#: core/templates/core/home.html:206
 msgid "Chatbots Inteligentes"
 msgstr "Chatbots Intel·ligents"
 
-#: core/templates/core/home.html:233
+#: core/templates/core/home.html:220
 msgid "Plataformas de Transcripción Automática"
 msgstr "Plataformes de Transcripció Automàtica"
 
-#: core/templates/core/home.html:234
+#: core/templates/core/home.html:221
 msgid ""
 "Transforma tus procesos de transcripción con nuestra tecnología avanzada de "
 "IA, capaz de manejar grandes volúmenes de datos con alta precisión."
@@ -286,7 +288,7 @@ msgstr ""
 "Transforma els teus processos de transcripció amb la nostra tecnologia "
 "avançada d'IA, capaç de gestionar grans volums de dades amb alta precisió."
 
-#: core/templates/core/home.html:236
+#: core/templates/core/home.html:223
 msgid ""
 "Eficiencia Mejorada: Transcribe automáticamente y reduce el tiempo dedicado "
 "a la transcripción manual."
@@ -294,11 +296,11 @@ msgstr ""
 "Eficiència Millorada: Transcriu automàticament i redueix el temps dedicat a "
 "la transcripció manual."
 
-#: core/templates/core/home.html:237
+#: core/templates/core/home.html:224
 msgid "Alta Precisión: Minimiza errores y mejora la calidad de los registros."
 msgstr "Alta Precisió: Minimitza errors i millora la qualitat dels registres."
 
-#: core/templates/core/home.html:238
+#: core/templates/core/home.html:225
 msgid ""
 "Accesibilidad Global: Permite el acceso a documentos históricos desde "
 "cualquier lugar y en cualquier momento."
@@ -306,7 +308,7 @@ msgstr ""
 "Accessibilitat Global: Permet l'accés a documents històrics des de qualsevol "
 "lloc i en qualsevol moment."
 
-#: core/templates/core/home.html:239
+#: core/templates/core/home.html:226
 msgid ""
 "Mejora en la Experiencia del Usuario: Gracias a la precisión de nuestras "
 "tecnologías de reconocimiento de texto y procesamiento de imágenes, los "
@@ -318,11 +320,11 @@ msgstr ""
 "poden confiar en la precisió de les transcripcions, la qual cosa millora la "
 "fiabilitat de les seves investigacions i projectes."
 
-#: core/templates/core/home.html:251
+#: core/templates/core/home.html:238
 msgid "Asistentes Virtuales Especializados"
 msgstr "Assistents Virtuals Especialitzats"
 
-#: core/templates/core/home.html:252
+#: core/templates/core/home.html:239
 msgid ""
 "Implementa asistentes virtuales para tareas específicas dentro de tu "
 "organización, mejorando la eficiencia y reduciendo la carga de trabajo."
@@ -330,30 +332,30 @@ msgstr ""
 "Implementa assistents virtuals per a tasques específiques dins de la teva "
 "organització, millorant-ne l'eficiència i reduint la càrrega de treball."
 
-#: core/templates/core/home.html:254
+#: core/templates/core/home.html:241
 msgid "Personalización: Adaptados a las necesidades y procesos de tu empresa."
 msgstr ""
 "Personalització: Adaptats a les necessitats i processos de la teva empresa."
 
-#: core/templates/core/home.html:255
+#: core/templates/core/home.html:242
 msgid ""
 "Disponibilidad Constante: Operativos las 24 horas para soporte continuo."
 msgstr "Disponibilitat Constant: Operatius les 24 hores per a suport continu."
 
-#: core/templates/core/home.html:256
+#: core/templates/core/home.html:243
 msgid "Reducción de Carga Laboral: Libera a tu personal de tareas repetitivas."
 msgstr ""
 "Reducció de Càrrega Laboral: Allibera el teu personal de tasques repetitives."
 
-#: core/templates/core/home.html:257
+#: core/templates/core/home.html:244
 msgid "Casos de Uso: Soporte técnico, recursos humanos, formación."
 msgstr "Casos d'Ús: Suport tècnic, recursos humans, formació."
 
-#: core/templates/core/home.html:269
+#: core/templates/core/home.html:256
 msgid "Chatbots Inteligentes para Atención al Cliente con Impacto Social"
 msgstr "Chatbots Intel·ligents per a Atenció al Client amb Impacte Social"
 
-#: core/templates/core/home.html:270
+#: core/templates/core/home.html:257
 msgid ""
 "Automatiza las consultas frecuentes y repetitivas con chatbots que entienden "
 "y responden de manera rápida y precisa. Esto libera al personal para que "
@@ -369,7 +371,7 @@ msgstr ""
 "organitzacions socials, organismes públics petits, empreses, o en àrees amb "
 "recursos limitats."
 
-#: core/templates/core/home.html:272
+#: core/templates/core/home.html:259
 msgid ""
 "Acceso Continuo a Servicios: Los chatbots están disponibles las 24 horas, "
 "garantizando que las personas puedan acceder a la ayuda y los servicios "
@@ -379,7 +381,7 @@ msgstr ""
 "garantint que les persones puguin accedir a l'ajuda i als serveis quan més "
 "ho necessitin, sense importar l'hora o la ubicació."
 
-#: core/templates/core/home.html:273
+#: core/templates/core/home.html:260
 msgid ""
 "Mejora en la Inclusión y la Experiencia del Usuario: Los chatbots pueden "
 "proporcionar interacciones más rápidas y adaptadas a las necesidades "
@@ -393,7 +395,7 @@ msgstr ""
 "immediata fins a aquells que busquen informació en un llenguatge accessible "
 "i clar."
 
-#: core/templates/core/home.html:274
+#: core/templates/core/home.html:261
 msgid ""
 "Mejora en la Experiencia del Usuario: Interacciones más rápidas y "
 "personalizadas."
@@ -401,15 +403,15 @@ msgstr ""
 "Millora en l'Experiència de l'Usuari: Interaccions més ràpides i "
 "personalitzades."
 
-#: core/templates/core/home.html:275
+#: core/templates/core/home.html:262
 msgid "Casos de Uso: Organizaciones sociales, Salud, Educación."
 msgstr "Casos d'Ús: Organitzacions socials, salut, educació."
 
-#: core/templates/core/home.html:287
+#: core/templates/core/home.html:274
 msgid "Soluciones Personalizadas con IA"
 msgstr "Solucions Personalitzades amb IA"
 
-#: core/templates/core/home.html:288
+#: core/templates/core/home.html:275
 msgid ""
 "Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de "
 "tu empresa, desde análisis predictivo hasta automatización completa de "
@@ -419,13 +421,13 @@ msgstr ""
 "tevaempresa, des d'anàlisi predictiva fins a automatització completa de "
 "processos."
 
-#: core/templates/core/home.html:290
+#: core/templates/core/home.html:277
 msgid ""
 "Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos."
 msgstr ""
 "Adaptabilitat: Solucions dissenyades específicament pels teus requeriments."
 
-#: core/templates/core/home.html:291
+#: core/templates/core/home.html:278
 msgid ""
 "Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis "
 "precisos y en tiempo real."
@@ -433,21 +435,21 @@ msgstr ""
 "Decisions Basades en Dades: Millora la presa de decisions amb anàlisis "
 "precises i en temps real."
 
-#: core/templates/core/home.html:292
+#: core/templates/core/home.html:279
 msgid ""
 "Aumento de la Productividad: Optimiza procesos y reduce costos operativos."
 msgstr ""
 "Augment de la Productivitat: Optimitza processos i redueix costos operatius."
 
-#: core/templates/core/home.html:293
+#: core/templates/core/home.html:280
 msgid "Casos de Uso: Finanzas, marketing, logística."
 msgstr "Casos d'Ús: Finances, màrqueting, logística."
 
-#: core/templates/core/home.html:310
+#: core/templates/core/home.html:297
 msgid "Tecnologías Utilizadas"
 msgstr "Tecnologies Utilitzades"
 
-#: core/templates/core/home.html:312
+#: core/templates/core/home.html:299
 msgid ""
 "Utilizamos tecnologías de vanguardia para ofrecer soluciones eficientes y "
 "efectivas."
@@ -455,11 +457,11 @@ msgstr ""
 "Utilitzem tecnologies d'avantguarda per oferir solucions eficients i "
 "efectives."
 
-#: core/templates/core/home.html:322
+#: core/templates/core/home.html:309
 msgid "Modelos de Respuesta GPT"
 msgstr "Models de Resposta GPT"
 
-#: core/templates/core/home.html:323
+#: core/templates/core/home.html:310
 msgid ""
 "Modelos avanzados entrenados con información específica para ofrecer "
 "respuestas precisas y relevantes."
@@ -467,11 +469,11 @@ msgstr ""
 "Models avançats entrenats amb informació específica per oferir respostes "
 "precises i rellevants."
 
-#: core/templates/core/home.html:331
+#: core/templates/core/home.html:318
 msgid "Modelos de Visión GPT"
 msgstr "Models de Visió GPT"
 
-#: core/templates/core/home.html:332
+#: core/templates/core/home.html:319
 msgid ""
 "Soluciones de visión por computador que permiten el reconocimiento y "
 "análisis de imágenes y videos."
@@ -479,11 +481,11 @@ msgstr ""
 "Solucions de visió per computador que permeten el reconeixement i l'anàlisi "
 "d'imatges i vídeos."
 
-#: core/templates/core/home.html:340
+#: core/templates/core/home.html:327
 msgid "Modelos de Traducción Automática"
 msgstr "Plataformes de Transcripció Automàtica"
 
-#: core/templates/core/home.html:341
+#: core/templates/core/home.html:328
 msgid ""
 "Traducción precisa y rápida entre múltiples idiomas, optimizando la "
 "comunicación global."
@@ -491,19 +493,19 @@ msgstr ""
 "Traducció precisa i ràpida entre múltiples idiomes, optimitzant la "
 "comunicació global."
 
-#: core/templates/core/home.html:349
+#: core/templates/core/home.html:336
 msgid "Modelos de Transcripción"
 msgstr "Models de Transcripció"
 
-#: core/templates/core/home.html:350
+#: core/templates/core/home.html:337
 msgid "Transforma texto en voz y voz en texto con alta precisión y eficiencia."
 msgstr "Transforma text en veu i veu en text amb alta precisió i eficiència."
 
-#: core/templates/core/home.html:358
+#: core/templates/core/home.html:345
 msgid "Soluciones Integradas"
 msgstr "Solucions Personalitzades"
 
-#: core/templates/core/home.html:359
+#: core/templates/core/home.html:346
 msgid ""
 "Implementaciones personalizadas combinando múltiples modelos para resolver "
 "problemas complejos."
@@ -511,12 +513,12 @@ msgstr ""
 "Implementacions personalitzades combinant múltiples models per resoldre "
 "problemes complexos."
 
-#: core/templates/core/home.html:372 core/templates/core/home.html:376
-#: core/templates/core/home.html:390
+#: core/templates/core/home.html:359 core/templates/core/home.html:363
+#: core/templates/core/home.html:377
 msgid "Quiénes Somos"
 msgstr "Qui som"
 
-#: core/templates/core/home.html:391
+#: core/templates/core/home.html:378
 msgid ""
 "En ÀgoraTechAI, combinamos nuestra experiencia en agroecología con la "
 "innovación tecnológica para ofrecer soluciones de Inteligencia Artificial "
@@ -528,11 +530,11 @@ msgstr ""
 "innovació tecnològica per oferir solucions d'intel·ligència artificial  que "
 "transformen empreses."
 
-#: core/templates/core/home.html:396
+#: core/templates/core/home.html:383
 msgid "Ofrecemos"
 msgstr "Oferim"
 
-#: core/templates/core/home.html:397
+#: core/templates/core/home.html:384
 msgid ""
 "Consultoría y soporte al sector público, cooperativas, asociaciones, "
 "organizaciones ESS, tejido productivo y asociativo."
@@ -540,43 +542,35 @@ msgstr ""
 "Consultoria i suport al sector públic, cooperatives, associacions, "
 "organitzacions ESS, teixit productiu i associatiu. "
 
-#: core/templates/core/home.html:404
+#: core/templates/core/home.html:391
 msgid "Coordinación"
 msgstr "Coordinació"
 
-#: core/templates/core/home.html:405
+#: core/templates/core/home.html:392
 msgid "Gestión y acompañamiento en programas públicos y privados"
 msgstr "Gestió i acompanyament en programes públics i privats."
 
-#: core/templates/core/home.html:412
+#: core/templates/core/home.html:399
 msgid "Empirismo Práctico"
 msgstr "Empirisme Pràctic:"
 
-#: core/templates/core/home.html:413
+#: core/templates/core/home.html:400
 msgid "Programas y proyectos de investigación aplicada."
 msgstr " Programes i projectes de recerca aplicada."
 
-#: core/templates/core/home.html:420
+#: core/templates/core/home.html:407
 msgid "Educación Continua"
 msgstr "Educacio continua"
 
-#: core/templates/core/home.html:421
+#: core/templates/core/home.html:408
 msgid "Programas y proyectos educativos y de formación."
 msgstr "Programes i projectes educatius i de formació."
 
-#: core/templates/core/home.html:441
-msgid "Mirar Video"
-msgstr "Watch Video"
-
-#: core/templates/core/home.html:444
+#: core/templates/core/home.html:431
 msgid "Nuestra Historia"
 msgstr "La Nostra Història"
 
-#: core/templates/core/home.html:446
-msgid "Est 1988"
-msgstr ""
-
-#: core/templates/core/home.html:449
+#: core/templates/core/home.html:437
 msgid ""
 "es una start-up de alto impacto social con un equipo transdisciplinar "
 "experimentado y joven a la vez. Nos encontramos en fase de despliegue "
@@ -595,16 +589,21 @@ msgstr ""
 "transformar  els serveis per millorar l'eficiència i el benestar de les "
 "persones."
 
-#: core/templates/core/home.html:454
-msgid "Watch Video"
-msgstr "Mira el Vídeo"
+#: core/templates/core/home.html:442
+#, fuzzy
+#| msgid "Mirar Video"
+msgid "Video"
+msgstr "Watch Video"
 
-#: core/templates/core/home.html:472
-msgid "Casos de Éxito"
-msgstr "Casos d'Èxit"
+#: core/templates/core/home.html:462
+msgid "Algunas de Nuestras Colaboraciones"
+msgstr "Algunes de les Nostres Col·laboracions"
 
+#: core/templates/core/home.html:478
+msgid "Colaboradores"
+msgstr "Col·laboracions"
 
-#: core/templates/core/home.html:491
+#: core/templates/core/home.html:516
 msgid ""
 "Descubre cómo nuestras soluciones han ayudado a otras empresas a alcanzar "
 "sus objetivos y mejorar su rendimiento."
@@ -612,118 +611,118 @@ msgstr ""
 "Descobreix com les nostres solucions han ajudat altres empreses a assolir "
 "els seus objectius i millorar-ne el rendiment."
 
-#: core/templates/core/home.html:500
+#: core/templates/core/home.html:525
 msgid "Todo"
 msgstr ""
 
-#: core/templates/core/home.html:501 core/templates/core/home.html:512
-#: core/templates/core/home.html:536 core/templates/core/home.html:584
-#: core/templates/core/home.html:596 core/templates/core/home.html:599
+#: core/templates/core/home.html:526 core/templates/core/home.html:537
+#: core/templates/core/home.html:561 core/templates/core/home.html:609
+#: core/templates/core/home.html:621 core/templates/core/home.html:624
 msgid "Suara"
 msgstr ""
 
-#: core/templates/core/home.html:513 core/templates/core/home.html:514
-#: core/templates/core/home.html:537 core/templates/core/home.html:585
-#: core/templates/core/home.html:597
+#: core/templates/core/home.html:538 core/templates/core/home.html:539
+#: core/templates/core/home.html:562 core/templates/core/home.html:610
+#: core/templates/core/home.html:622
 msgid "Solución Personalizada"
 msgstr "Solucions Personalitzades"
 
-#: core/templates/core/home.html:515 core/templates/core/home.html:527
-#: core/templates/core/home.html:539 core/templates/core/home.html:551
-#: core/templates/core/home.html:563 core/templates/core/home.html:575
-#: core/templates/core/home.html:587 core/templates/core/home.html:611
+#: core/templates/core/home.html:540 core/templates/core/home.html:552
+#: core/templates/core/home.html:564 core/templates/core/home.html:576
+#: core/templates/core/home.html:588 core/templates/core/home.html:600
+#: core/templates/core/home.html:612 core/templates/core/home.html:636
 msgid "More Details"
 msgstr ""
 
-#: core/templates/core/home.html:524 core/templates/core/home.html:560
-#: core/templates/core/home.html:572 core/templates/core/sthi-details.html:17
+#: core/templates/core/home.html:549 core/templates/core/home.html:585
+#: core/templates/core/home.html:597 core/templates/core/sthi-details.html:17
 msgid "STHI"
 msgstr ""
 
-#: core/templates/core/home.html:525 core/templates/core/home.html:561
-#: core/templates/core/home.html:573
+#: core/templates/core/home.html:550 core/templates/core/home.html:586
+#: core/templates/core/home.html:598
 msgid "Transcripción Semi-Automática"
 msgstr "Transcripció Automàtica"
 
-#: core/templates/core/home.html:526 core/templates/core/sthi-details.html:12
+#: core/templates/core/home.html:551 core/templates/core/sthi-details.html:12
 msgid "Plataforma de Transcripción Semi-Automática"
 msgstr "Plataformes de Transcripció Automàtica"
 
-#: core/templates/core/home.html:538
+#: core/templates/core/home.html:563
 msgid "Arquitectura Suara"
 msgstr ""
 
-#: core/templates/core/home.html:549 core/templates/core/home.html:609
+#: core/templates/core/home.html:574 core/templates/core/home.html:634
 msgid "Chatbot Inteligente experto en Agroecología con IA"
 msgstr ""
 
-#: core/templates/core/home.html:550
+#: core/templates/core/home.html:575
 msgid "Dashboard de Control"
 msgstr ""
 
-#: core/templates/core/home.html:562
+#: core/templates/core/home.html:587
 msgid "Documento"
 msgstr ""
 
-#: core/templates/core/home.html:574
+#: core/templates/core/home.html:599
 msgid "Branding 2"
 msgstr ""
 
-#: core/templates/core/home.html:586
+#: core/templates/core/home.html:611
 msgid "Chatbot de ayuda"
 msgstr ""
 
-#: core/templates/core/home.html:598
+#: core/templates/core/home.html:623
 msgid "Product 3"
 msgstr ""
 
-#: core/templates/core/home.html:669
+#: core/templates/core/home.html:670
 msgid "Transformemos Juntos tu Negocio"
 msgstr "Transformem junts el teu negoci"
 
-#: core/templates/core/home.html:686
+#: core/templates/core/home.html:687
 msgid "Barcelona"
 msgstr ""
-#: core/templates/core/home.html:696
+
+#: core/templates/core/home.html:697
 msgid "Llámanos"
 msgstr "Truca'ns"
 
-#: core/templates/core/home.html:704
+#: core/templates/core/home.html:705
 msgid "Escríbenos"
 msgstr "Escriu-nos"
 
-#: core/templates/core/home.html:723
+#: core/templates/core/home.html:724
 msgid "Your Name"
 msgstr "El teu Nom"
 
-#: core/templates/core/home.html:726
+#: core/templates/core/home.html:727
 msgid "Your Email"
 msgstr "El teu Correu Electrònic"
 
-#: core/templates/core/home.html:729
+#: core/templates/core/home.html:730
 msgid "Subject"
 msgstr "Assumpte"
 
-#: core/templates/core/home.html:732
+#: core/templates/core/home.html:733
 msgid "Message"
 msgstr "Missatge"
 
-#: core/templates/core/home.html:735
+#: core/templates/core/home.html:736
 msgid "ENVIAR"
 msgstr "ENVIAR"
 
-#: core/templates/core/home.html:740
+#: core/templates/core/home.html:741
 msgid "Your message has been sent. Thank you!"
 msgstr "El teu missatge s'ha enviat. Gràcies!"
 
-#: core/templates/core/home.html:742
+#: core/templates/core/home.html:743
 msgid ""
 "There was an error in your form submission. Please correct the errors and "
 "try again."
 msgstr ""
-"Hi ha hagut un error en l'enviament del formulari. Si us plau, corregeix "
-"els errors i torna-ho a intentar."
-
+"Hi ha hagut un error en l'enviament del formulari. Si us plau, corregeix els "
+"errors i torna-ho a intentar."
 
 #: core/templates/core/sthi-details.html:32
 msgid "Características Clave de la STHI"
@@ -871,8 +870,8 @@ msgid ""
 "MentJove interactúa en tiempo real con los usuarios para proporcionar "
 "soporte inmediato y personalizado."
 msgstr ""
-"MentJove interactua en temps real amb els usuaris per proporcionar "
-"suport immediat i personalitzat."
+"MentJove interactua en temps real amb els usuaris per proporcionar suport "
+"immediat i personalitzat."
 
 #: core/templates/core/suara.html:37
 msgid "Detección Precoz"
@@ -937,9 +936,8 @@ msgid ""
 "Recursos Educativos: Proporciona información y técnicas de psicología para "
 "la prevención y el manejo de problemas de salud mental."
 msgstr ""
-"Recursos Educatius: Proporciona informació i tècniques de psicologia per "
-"a la prevenció i el maneig de problemes de salut mental."
-
+"Recursos Educatius: Proporciona informació i tècniques de psicologia per a "
+"la prevenció i el maneig de problemes de salut mental."
 
 #: core/templates/core/suara.html:55
 msgid ""
@@ -956,3 +954,9 @@ msgid ""
 msgstr ""
 "Plataforma Segura i Inclusiva: Garanteix un entorn segur per als joves, "
 "protegint-ne la privadesa i les dades."
+
+#~ msgid "Watch Video"
+#~ msgstr "Mira el Vídeo"
+
+#~ msgid "Casos de Éxito"
+#~ msgstr "Casos d'Èxit"

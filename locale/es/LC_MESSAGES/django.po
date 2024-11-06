@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 11:16+0000\n"
+"POT-Creation-Date: 2024-11-06 09:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
+
 #: core/templates/core/agroecobot.html:12
-#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:529
-#: core/templates/core/home.html:574 core/templates/core/home.html:634
-#: core/templates/core/home.html:636
+#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:528
+#: core/templates/core/home.html:573 core/templates/core/home.html:633
+#: core/templates/core/home.html:635
 msgid "AgroEcoBot"
 msgstr ""
 
 #: core/templates/core/agroecobot.html:15 core/templates/core/base.html:169
-#: core/templates/core/home.html:401 core/templates/core/home.html:698
-#: core/templates/core/home.html:1046 core/templates/core/sthi-details.html:16
-#: core/templates/core/suara.html:15
+#: core/templates/core/home.html:362 core/templates/core/home.html:465
+#: core/templates/core/home.html:673 core/templates/core/home.html:1021
+#: core/templates/core/sthi-details.html:16 core/templates/core/suara.html:15
 msgid "Home"
 msgstr ""
 
@@ -139,161 +140,140 @@ msgstr ""
 msgid "Gallery Image 3"
 msgstr ""
 
-#: core/templates/core/agroecobot.html:79 core/templates/core/home.html:181
-#: core/templates/core/sthi-details.html:61 core/templates/core/suara.html:77
+#: core/templates/core/agroecobot.html:79 core/templates/core/home.html:142
+#: core/templates/core/sthi-details.html:59 core/templates/core/suara.html:77
 msgid "Solicita una Consulta Gratuita"
 msgstr "Solicita una Consulta Gratuita"
 
 #: core/templates/core/base.html:76 core/templates/core/base.html:170
-#: core/templates/core/home.html:69 core/templates/core/home.html:1047
+#: core/templates/core/home.html:66 core/templates/core/home.html:1022
 msgid "Servicios"
 msgstr "Servicios"
 
 #: core/templates/core/base.html:77 core/templates/core/base.html:171
-#: core/templates/core/home.html:70 core/templates/core/home.html:1048
+#: core/templates/core/home.html:67 core/templates/core/home.html:1023
 msgid "Tecnologías"
 msgstr "Tecnologías"
 
 #: core/templates/core/base.html:78 core/templates/core/base.html:172
-#: core/templates/core/home.html:71 core/templates/core/home.html:1049
+#: core/templates/core/home.html:68 core/templates/core/home.html:1024
 msgid "Nosotros"
 msgstr "Nosotros"
 
 #: core/templates/core/base.html:79 core/templates/core/base.html:173
-#: core/templates/core/home.html:72 core/templates/core/home.html:515
-#: core/templates/core/home.html:1050
+#: core/templates/core/home.html:69 core/templates/core/home.html:466
+#: core/templates/core/home.html:514 core/templates/core/home.html:1025
 msgid "Proyectos"
 msgstr "Proyectos"
 
 #: core/templates/core/base.html:80 core/templates/core/base.html:174
-#: core/templates/core/home.html:73 core/templates/core/home.html:699
-#: core/templates/core/home.html:1051
+#: core/templates/core/home.html:70 core/templates/core/home.html:674
+#: core/templates/core/home.html:1026
 msgid "Contacto"
 msgstr "Contacto"
 
-#: core/templates/core/base.html:179 core/templates/core/home.html:224
-#: core/templates/core/home.html:1056
+#: core/templates/core/base.html:179 core/templates/core/home.html:185
+#: core/templates/core/home.html:1031
 msgid "Nuestros Servicios"
 msgstr ""
 
-#: core/templates/core/base.html:181 core/templates/core/home.html:1058
+#: core/templates/core/base.html:181 core/templates/core/home.html:1033
 msgid "Chatbots Inteligentes con IA"
 msgstr ""
 
-#: core/templates/core/base.html:182 core/templates/core/home.html:235
-#: core/templates/core/home.html:528 core/templates/core/home.html:1059
+#: core/templates/core/base.html:182 core/templates/core/home.html:196
+#: core/templates/core/home.html:527 core/templates/core/home.html:1034
 msgid "Transcripción Automática"
 msgstr ""
 
-#: core/templates/core/base.html:183 core/templates/core/home.html:250
-#: core/templates/core/home.html:1060
+#: core/templates/core/base.html:183 core/templates/core/home.html:211
+#: core/templates/core/home.html:1035
 msgid "Soluciones Personalizadas"
 msgstr ""
 
-#: core/templates/core/base.html:184 core/templates/core/home.html:240
-#: core/templates/core/home.html:1061
+#: core/templates/core/base.html:184 core/templates/core/home.html:201
+#: core/templates/core/home.html:1036
 msgid "Asistentes Virtuales"
 msgstr ""
 
-#: core/templates/core/base.html:189 core/templates/core/home.html:1066
+#: core/templates/core/base.html:189 core/templates/core/home.html:1041
 msgid "Contáctanos"
 msgstr ""
 
-#: core/templates/core/base.html:193 core/templates/core/home.html:1070
+#: core/templates/core/base.html:193 core/templates/core/home.html:1045
 msgid "Teléfono:"
 msgstr ""
 
-#: core/templates/core/base.html:195 core/templates/core/home.html:1072
+#: core/templates/core/base.html:195 core/templates/core/home.html:1047
 msgid "Correo:"
 msgstr ""
 
-#: core/templates/core/home.html:159
+#: core/templates/core/home.html:79 core/templates/core/home.html:87
+msgid "Español"
+msgstr ""
+
+#: core/templates/core/home.html:80 core/templates/core/home.html:92
+msgid "Català"
+msgstr ""
+
+#: core/templates/core/home.html:81 core/templates/core/home.html:97
+msgid "English"
+msgstr ""
+
+#: core/templates/core/home.html:133
 msgid "Revoluciona tu Organización con Inteligencia Artificial"
 msgstr ""
 
-#: core/templates/core/home.html:163
-msgid "S"
+#: core/templates/core/home.html:137
+msgid "Soluciones"
 msgstr ""
 
-#: core/templates/core/home.html:164 core/templates/core/home.html:169
-#: core/templates/core/home.html:175
-msgid "o"
+#: core/templates/core/home.html:138
+msgid "con"
 msgstr ""
 
-#: core/templates/core/home.html:165
-msgid "l"
+#: core/templates/core/home.html:139
+msgid "IA"
 msgstr ""
 
-#: core/templates/core/home.html:166
-msgid "u"
-msgstr ""
-
-#: core/templates/core/home.html:167 core/templates/core/home.html:174
-msgid "c"
-msgstr ""
-
-#: core/templates/core/home.html:168
-msgid "i"
-msgstr ""
-
-#: core/templates/core/home.html:170 core/templates/core/home.html:176
-msgid "n"
-msgstr ""
-
-#: core/templates/core/home.html:171
-msgid "e"
-msgstr ""
-
-#: core/templates/core/home.html:172
-msgid "s"
-msgstr ""
-
-#: core/templates/core/home.html:178
-msgid "I"
-msgstr ""
-
-#: core/templates/core/home.html:179
-msgid "A"
-msgstr ""
-
-#: core/templates/core/home.html:226
+#: core/templates/core/home.html:187
 msgid ""
 "Descubre cómo nuestras soluciones de IA pueden transformar tu organización. "
-"Nos especializamos en una variedad de servicios diseñados para satisfacer "
-"tus necesidades específicas."
+"Estamos especializados en una variedad de servicios diseñados para "
+"satisfacer tus necesidades específicas."
 msgstr ""
 
-#: core/templates/core/home.html:245
+#: core/templates/core/home.html:206
 msgid "Chatbots Inteligentes"
 msgstr ""
 
-#: core/templates/core/home.html:259
+#: core/templates/core/home.html:220
 msgid "Plataformas de Transcripción Automática"
 msgstr ""
 
-#: core/templates/core/home.html:260
+#: core/templates/core/home.html:221
 msgid ""
 "Transforma tus procesos de transcripción con nuestra tecnología avanzada de "
 "IA, capaz de manejar grandes volúmenes de datos con alta precisión."
 msgstr ""
 
-#: core/templates/core/home.html:262
+#: core/templates/core/home.html:223
 msgid ""
 "Eficiencia Mejorada: Transcribe automáticamente y reduce el tiempo dedicado "
 "a la transcripción manual."
 msgstr ""
 
-#: core/templates/core/home.html:263
+#: core/templates/core/home.html:224
 msgid "Alta Precisión: Minimiza errores y mejora la calidad de los registros."
 msgstr ""
 
-#: core/templates/core/home.html:264
+#: core/templates/core/home.html:225
 msgid ""
 "Accesibilidad Global: Permite el acceso a documentos históricos desde "
 "cualquier lugar y en cualquier momento."
 msgstr ""
 
-#: core/templates/core/home.html:265
+#: core/templates/core/home.html:226
 msgid ""
 "Mejora en la Experiencia del Usuario: Gracias a la precisión de nuestras "
 "tecnologías de reconocimiento de texto y procesamiento de imágenes, los "
@@ -301,37 +281,38 @@ msgid ""
 "mejora la fiabilidad de sus investigaciones y proyectos."
 msgstr ""
 
-#: core/templates/core/home.html:277
+#: core/templates/core/home.html:238
 msgid "Asistentes Virtuales Especializados"
 msgstr ""
 
-#: core/templates/core/home.html:278
+#: core/templates/core/home.html:239
 msgid ""
 "Implementa asistentes virtuales para tareas específicas dentro de tu "
 "organización, mejorando la eficiencia y reduciendo la carga de trabajo."
 msgstr ""
 
-#: core/templates/core/home.html:280
+#: core/templates/core/home.html:241
 msgid "Personalización: Adaptados a las necesidades y procesos de tu empresa."
 msgstr ""
 
-#: core/templates/core/home.html:281
-msgid "Disponibilidad Constante: Operativos 24/7 para soporte continuo."
+#: core/templates/core/home.html:242
+msgid ""
+"Disponibilidad Constante: Operativos las 24 horas para soporte continuo."
 msgstr ""
 
-#: core/templates/core/home.html:282
+#: core/templates/core/home.html:243
 msgid "Reducción de Carga Laboral: Libera a tu personal de tareas repetitivas."
 msgstr ""
 
-#: core/templates/core/home.html:283
+#: core/templates/core/home.html:244
 msgid "Casos de Uso: Soporte técnico, recursos humanos, formación."
 msgstr ""
 
-#: core/templates/core/home.html:295
+#: core/templates/core/home.html:256
 msgid "Chatbots Inteligentes para Atención al Cliente con Impacto Social"
 msgstr ""
 
-#: core/templates/core/home.html:296
+#: core/templates/core/home.html:257
 msgid ""
 "Automatiza las consultas frecuentes y repetitivas con chatbots que entienden "
 "y responden de manera rápida y precisa. Esto libera al personal para que "
@@ -341,14 +322,14 @@ msgid ""
 "con recursos limitados."
 msgstr ""
 
-#: core/templates/core/home.html:298
+#: core/templates/core/home.html:259
 msgid ""
-"Acceso Continuo a Servicios: Los chatbots están disponibles 24/7, "
+"Acceso Continuo a Servicios: Los chatbots están disponibles las 24 horas, "
 "garantizando que las personas puedan acceder a la ayuda y los servicios "
 "cuando más los necesiten, sin importar la hora o su ubicación."
 msgstr ""
 
-#: core/templates/core/home.html:299
+#: core/templates/core/home.html:260
 msgid ""
 "Mejora en la Inclusión y la Experiencia del Usuario: Los chatbots pueden "
 "proporcionar interacciones más rápidas y adaptadas a las necesidades "
@@ -357,111 +338,111 @@ msgid ""
 "claro."
 msgstr ""
 
-#: core/templates/core/home.html:300
+#: core/templates/core/home.html:261
 msgid ""
 "Mejora en la Experiencia del Usuario: Interacciones más rápidas y "
 "personalizadas."
 msgstr ""
 
-#: core/templates/core/home.html:301
+#: core/templates/core/home.html:262
 msgid "Casos de Uso: Organizaciones sociales, Salud, Educación."
 msgstr ""
 
-#: core/templates/core/home.html:313
+#: core/templates/core/home.html:274
 msgid "Soluciones Personalizadas con IA"
 msgstr ""
 
-#: core/templates/core/home.html:314
+#: core/templates/core/home.html:275
 msgid ""
 "Desarrollamos soluciones a medida que se ajustan a las necesidades únicas de "
 "tu empresa, desde análisis predictivo hasta automatización completa de "
 "procesos."
 msgstr ""
 
-#: core/templates/core/home.html:316
+#: core/templates/core/home.html:277
 msgid ""
 "Adaptabilidad: Soluciones diseñadas específicamente para tus requerimientos."
 msgstr ""
 
-#: core/templates/core/home.html:317
+#: core/templates/core/home.html:278
 msgid ""
 "Decisiones Basadas en Datos: Mejora la toma de decisiones con análisis "
 "precisos y en tiempo real."
 msgstr ""
 
-#: core/templates/core/home.html:318
+#: core/templates/core/home.html:279
 msgid ""
 "Aumento de la Productividad: Optimiza procesos y reduce costos operativos."
 msgstr ""
 
-#: core/templates/core/home.html:319
+#: core/templates/core/home.html:280
 msgid "Casos de Uso: Finanzas, marketing, logística."
 msgstr ""
 
-#: core/templates/core/home.html:336
+#: core/templates/core/home.html:297
 msgid "Tecnologías Utilizadas"
 msgstr ""
 
-#: core/templates/core/home.html:338
+#: core/templates/core/home.html:299
 msgid ""
 "Utilizamos tecnologías de vanguardia para ofrecer soluciones eficientes y "
 "efectivas."
 msgstr ""
 
-#: core/templates/core/home.html:348
+#: core/templates/core/home.html:309
 msgid "Modelos de Respuesta GPT"
 msgstr ""
 
-#: core/templates/core/home.html:349
+#: core/templates/core/home.html:310
 msgid ""
 "Modelos avanzados entrenados con información específica para ofrecer "
 "respuestas precisas y relevantes."
 msgstr ""
 
-#: core/templates/core/home.html:357
+#: core/templates/core/home.html:318
 msgid "Modelos de Visión GPT"
 msgstr ""
 
-#: core/templates/core/home.html:358
+#: core/templates/core/home.html:319
 msgid ""
-"Soluciones de visión por computadora que permiten el reconocimiento y "
+"Soluciones de visión por computador que permiten el reconocimiento y "
 "análisis de imágenes y videos."
 msgstr ""
 
-#: core/templates/core/home.html:366
+#: core/templates/core/home.html:327
 msgid "Modelos de Traducción Automática"
 msgstr ""
 
-#: core/templates/core/home.html:367
+#: core/templates/core/home.html:328
 msgid ""
 "Traducción precisa y rápida entre múltiples idiomas, optimizando la "
 "comunicación global."
 msgstr ""
 
-#: core/templates/core/home.html:375
+#: core/templates/core/home.html:336
 msgid "Modelos de Transcripción"
 msgstr ""
 
-#: core/templates/core/home.html:376
-msgid "Transforma texto a voz y voz a texto con alta precisión y eficiencia."
+#: core/templates/core/home.html:337
+msgid "Transforma texto en voz y voz en texto con alta precisión y eficiencia."
 msgstr ""
 
-#: core/templates/core/home.html:384
+#: core/templates/core/home.html:345
 msgid "Soluciones Integradas"
 msgstr ""
 
-#: core/templates/core/home.html:385
+#: core/templates/core/home.html:346
 msgid ""
 "Implementaciones personalizadas combinando múltiples modelos para resolver "
 "problemas complejos."
 msgstr ""
 
-#: core/templates/core/home.html:398 core/templates/core/home.html:402
-#: core/templates/core/home.html:416
-msgid "Sobre Nosotros"
+#: core/templates/core/home.html:359 core/templates/core/home.html:363
+#: core/templates/core/home.html:377
+msgid "Quiénes Somos"
 msgstr ""
 
-#: core/templates/core/home.html:417
+#: core/templates/core/home.html:378
 msgid ""
 "En ÀgoraTechAI, combinamos nuestra experiencia en agroecología con la "
 "innovación tecnológica para ofrecer soluciones de Inteligencia Artificial "
@@ -470,49 +451,45 @@ msgid ""
 "del cliente."
 msgstr ""
 
-#: core/templates/core/home.html:422
+#: core/templates/core/home.html:383
 msgid "Ofrecemos"
 msgstr ""
 
-#: core/templates/core/home.html:423
+#: core/templates/core/home.html:384
 msgid ""
 "Consultoría y soporte al sector público, cooperativas, asociaciones, "
 "organizaciones ESS, tejido productivo y asociativo."
 msgstr ""
 
-#: core/templates/core/home.html:430
+#: core/templates/core/home.html:391
 msgid "Coordinación"
 msgstr ""
 
-#: core/templates/core/home.html:431
+#: core/templates/core/home.html:392
 msgid "Gestión y acompañamiento en programas públicos y privados"
 msgstr ""
 
-#: core/templates/core/home.html:438
+#: core/templates/core/home.html:399
 msgid "Empirismo Práctico"
 msgstr ""
 
-#: core/templates/core/home.html:439
+#: core/templates/core/home.html:400
 msgid "Programas y proyectos de investigación aplicada."
 msgstr ""
 
-#: core/templates/core/home.html:446
+#: core/templates/core/home.html:407
 msgid "Educación Continua"
 msgstr ""
 
-#: core/templates/core/home.html:447
+#: core/templates/core/home.html:408
 msgid "Programas y proyectos educativos y de formación."
 msgstr ""
 
-#: core/templates/core/home.html:470
+#: core/templates/core/home.html:431
 msgid "Nuestra Historia"
 msgstr ""
 
-#: core/templates/core/home.html:472
-msgid "Est 1988"
-msgstr ""
-
-#: core/templates/core/home.html:475
+#: core/templates/core/home.html:437
 msgid ""
 "es una start-up de alto impacto social con un equipo transdisciplinar "
 "experimentado y joven a la vez. Nos encontramos en fase de despliegue "
@@ -523,122 +500,130 @@ msgid ""
 "servicios para mejorar la eficiencia y el bienestar de las personas."
 msgstr ""
 
-#: core/templates/core/home.html:480
-msgid "Watch Video"
+#: core/templates/core/home.html:442
+msgid "Video"
 msgstr ""
 
-#: core/templates/core/home.html:517
+#: core/templates/core/home.html:462
+msgid "Algunas de Nuestras Colaboraciones"
+msgstr ""
+
+#: core/templates/core/home.html:478
+msgid "Colaboradores"
+msgstr ""
+
+#: core/templates/core/home.html:516
 msgid ""
 "Descubre cómo nuestras soluciones han ayudado a otras empresas a alcanzar "
 "sus objetivos y mejorar su rendimiento."
 msgstr ""
 
-#: core/templates/core/home.html:526
+#: core/templates/core/home.html:525
 msgid "Todo"
 msgstr ""
 
-#: core/templates/core/home.html:527 core/templates/core/home.html:538
-#: core/templates/core/home.html:562 core/templates/core/home.html:610
-#: core/templates/core/home.html:622 core/templates/core/home.html:625
+#: core/templates/core/home.html:526 core/templates/core/home.html:537
+#: core/templates/core/home.html:561 core/templates/core/home.html:609
+#: core/templates/core/home.html:621 core/templates/core/home.html:624
 msgid "Suara"
 msgstr ""
 
-#: core/templates/core/home.html:539 core/templates/core/home.html:540
-#: core/templates/core/home.html:563 core/templates/core/home.html:611
-#: core/templates/core/home.html:623
+#: core/templates/core/home.html:538 core/templates/core/home.html:539
+#: core/templates/core/home.html:562 core/templates/core/home.html:610
+#: core/templates/core/home.html:622
 msgid "Solución Personalizada"
 msgstr ""
 
-#: core/templates/core/home.html:541 core/templates/core/home.html:553
-#: core/templates/core/home.html:565 core/templates/core/home.html:577
-#: core/templates/core/home.html:589 core/templates/core/home.html:601
-#: core/templates/core/home.html:613 core/templates/core/home.html:637
+#: core/templates/core/home.html:540 core/templates/core/home.html:552
+#: core/templates/core/home.html:564 core/templates/core/home.html:576
+#: core/templates/core/home.html:588 core/templates/core/home.html:600
+#: core/templates/core/home.html:612 core/templates/core/home.html:636
 msgid "More Details"
 msgstr ""
 
-#: core/templates/core/home.html:550 core/templates/core/home.html:586
-#: core/templates/core/home.html:598 core/templates/core/sthi-details.html:17
+#: core/templates/core/home.html:549 core/templates/core/home.html:585
+#: core/templates/core/home.html:597 core/templates/core/sthi-details.html:17
 msgid "STHI"
 msgstr ""
 
-#: core/templates/core/home.html:551 core/templates/core/home.html:587
-#: core/templates/core/home.html:599
+#: core/templates/core/home.html:550 core/templates/core/home.html:586
+#: core/templates/core/home.html:598
 msgid "Transcripción Semi-Automática"
 msgstr ""
 
-#: core/templates/core/home.html:552 core/templates/core/sthi-details.html:12
+#: core/templates/core/home.html:551 core/templates/core/sthi-details.html:12
 msgid "Plataforma de Transcripción Semi-Automática"
 msgstr ""
 
-#: core/templates/core/home.html:564
+#: core/templates/core/home.html:563
 msgid "Arquitectura Suara"
 msgstr ""
 
-#: core/templates/core/home.html:575 core/templates/core/home.html:635
+#: core/templates/core/home.html:574 core/templates/core/home.html:634
 msgid "Chatbot Inteligente experto en Agroecología con IA"
 msgstr ""
 
-#: core/templates/core/home.html:576
+#: core/templates/core/home.html:575
 msgid "Dashboard de Control"
 msgstr ""
 
-#: core/templates/core/home.html:588
+#: core/templates/core/home.html:587
 msgid "Documento"
 msgstr ""
 
-#: core/templates/core/home.html:600
+#: core/templates/core/home.html:599
 msgid "Branding 2"
 msgstr ""
 
-#: core/templates/core/home.html:612
+#: core/templates/core/home.html:611
 msgid "Chatbot de ayuda"
 msgstr ""
 
-#: core/templates/core/home.html:624
+#: core/templates/core/home.html:623
 msgid "Product 3"
 msgstr ""
 
-#: core/templates/core/home.html:695
+#: core/templates/core/home.html:670
 msgid "Transformemos Juntos tu Negocio"
 msgstr ""
 
-#: core/templates/core/home.html:712
+#: core/templates/core/home.html:687
 msgid "Barcelona"
 msgstr ""
 
-#: core/templates/core/home.html:722
+#: core/templates/core/home.html:697
 msgid "Llámanos"
 msgstr ""
 
-#: core/templates/core/home.html:730
+#: core/templates/core/home.html:705
 msgid "Escríbenos"
 msgstr ""
 
-#: core/templates/core/home.html:749
+#: core/templates/core/home.html:724
 msgid "Your Name"
 msgstr ""
 
-#: core/templates/core/home.html:752
+#: core/templates/core/home.html:727
 msgid "Your Email"
 msgstr ""
 
-#: core/templates/core/home.html:755
+#: core/templates/core/home.html:730
 msgid "Subject"
 msgstr ""
 
-#: core/templates/core/home.html:758
+#: core/templates/core/home.html:733
 msgid "Message"
 msgstr ""
 
-#: core/templates/core/home.html:761
+#: core/templates/core/home.html:736
 msgid "ENVIAR"
 msgstr ""
 
-#: core/templates/core/home.html:766
+#: core/templates/core/home.html:741
 msgid "Your message has been sent. Thank you!"
 msgstr ""
 
-#: core/templates/core/home.html:768
+#: core/templates/core/home.html:743
 msgid ""
 "There was an error in your form submission. Please correct the errors and "
 "try again."
@@ -665,7 +650,7 @@ msgid "Control de calidad en cada fase"
 msgstr ""
 
 #: core/templates/core/sthi-details.html:39
-msgid "Impacto y beneficios de la STHI"
+msgid "Impacto y Beneficios de la STHI"
 msgstr ""
 
 #: core/templates/core/sthi-details.html:40
@@ -673,7 +658,7 @@ msgid ""
 "Reducimos significativamente el tiempo de transcripción. Lo que "
 "tradicionalmente podría llevar meses, nosotros lo realizamos en días gracias "
 "a la integración de la IA. Combinando la eficiencia de la IA con la "
-"precisión humana, asegurando transcripciones de alta calidad."
+"precisión humana, aseguramos transcripciones de alta calidad."
 msgstr ""
 
 #: core/templates/core/sthi-details.html:45
@@ -684,7 +669,7 @@ msgstr ""
 msgid ""
 "Representa un avance pionero en la transcripción de documentos históricos, "
 "fusionando la Inteligencia Artificial (IA) más avanzada con la interacción "
-"humana experta. Este enfoque híbrido no sólo optimiza la eficiencia y "
+"humana experta. Este enfoque híbrido no solo optimiza la eficiencia y "
 "precisión en la transcripción de escrituras antiguas, sino que también "
 "redefine el proceso de digitalización a gran escala."
 msgstr ""
@@ -745,25 +730,6 @@ msgid ""
 "seguridad y protección de datos."
 msgstr ""
 
-#: core/templates/core/sthi-details.html:57
-msgid ""
-"Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. "
-"Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque "
-"nesciunt fuga."
-msgstr ""
-
-#: core/templates/core/sthi-details.html:58
-msgid ""
-"Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut "
-"consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. "
-"Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint "
-"quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel "
-"voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum "
-"in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem "
-"ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias "
-"explicabo ea."
-msgstr ""
-
 #: core/templates/core/suara.html:12 core/templates/core/suara.html:16
 msgid "MentJove©"
 msgstr ""
@@ -788,7 +754,7 @@ msgid ""
 msgstr ""
 
 #: core/templates/core/suara.html:42
-msgid "Soporte Continuo"
+msgid "Apoyo Continuo"
 msgstr ""
 
 #: core/templates/core/suara.html:43
@@ -819,14 +785,14 @@ msgstr ""
 
 #: core/templates/core/suara.html:52
 msgid ""
-"Soporte Continuo: Ofrece asistencia 24/7, mejorando la accesibilidad y "
-"proporcionando soporte constante."
+"Apoyo Continuo: Ofrece asistencia las 24 horas, mejorando la accesibilidad y "
+"proporcionando apoyo constante."
 msgstr ""
 
 #: core/templates/core/suara.html:53
 msgid ""
-"Recursos Educativos: Proporciona información y técnicas de psicología "
-"positiva para la prevención y el manejo de problemas de salud mental."
+"Recursos Educativos: Proporciona información y técnicas de psicología para "
+"la prevención y el manejo de problemas de salud mental."
 msgstr ""
 
 #: core/templates/core/suara.html:55

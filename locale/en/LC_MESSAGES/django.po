@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 10:29+0000\n"
+"POT-Creation-Date: 2024-11-06 09:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: core/templates/core/agroecobot.html:12
-#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:490
-#: core/templates/core/home.html:535 core/templates/core/home.html:595
-#: core/templates/core/home.html:597
+#: core/templates/core/agroecobot.html:16 core/templates/core/home.html:528
+#: core/templates/core/home.html:573 core/templates/core/home.html:633
+#: core/templates/core/home.html:635
 msgid "AgroEcoBot"
 msgstr ""
 
 #: core/templates/core/agroecobot.html:15 core/templates/core/base.html:169
-#: core/templates/core/home.html:362 core/templates/core/home.html:462
-#: core/templates/core/home.html:659 core/templates/core/home.html:1007
+#: core/templates/core/home.html:362 core/templates/core/home.html:465
+#: core/templates/core/home.html:673 core/templates/core/home.html:1021
 #: core/templates/core/sthi-details.html:16 core/templates/core/suara.html:15
 msgid "Home"
 msgstr "Home"
@@ -172,65 +172,65 @@ msgid "Solicita una Consulta Gratuita"
 msgstr "Request a Free Consultation"
 
 #: core/templates/core/base.html:76 core/templates/core/base.html:170
-#: core/templates/core/home.html:66 core/templates/core/home.html:1008
+#: core/templates/core/home.html:66 core/templates/core/home.html:1022
 msgid "Servicios"
 msgstr "Services"
 
 #: core/templates/core/base.html:77 core/templates/core/base.html:171
-#: core/templates/core/home.html:67 core/templates/core/home.html:1009
+#: core/templates/core/home.html:67 core/templates/core/home.html:1023
 msgid "Tecnologías"
 msgstr "Technologies"
 
 #: core/templates/core/base.html:78 core/templates/core/base.html:172
-#: core/templates/core/home.html:68 core/templates/core/home.html:1010
+#: core/templates/core/home.html:68 core/templates/core/home.html:1024
 msgid "Nosotros"
 msgstr "About Us"
 
 #: core/templates/core/base.html:79 core/templates/core/base.html:173
-#: core/templates/core/home.html:69 core/templates/core/home.html:463
-#: core/templates/core/home.html:476 core/templates/core/home.html:1011
+#: core/templates/core/home.html:69 core/templates/core/home.html:466
+#: core/templates/core/home.html:514 core/templates/core/home.html:1025
 msgid "Proyectos"
 msgstr "Projects"
 
 #: core/templates/core/base.html:80 core/templates/core/base.html:174
-#: core/templates/core/home.html:70 core/templates/core/home.html:660
-#: core/templates/core/home.html:1012
+#: core/templates/core/home.html:70 core/templates/core/home.html:674
+#: core/templates/core/home.html:1026
 msgid "Contacto"
 msgstr "Contact"
 
 #: core/templates/core/base.html:179 core/templates/core/home.html:185
-#: core/templates/core/home.html:1017
+#: core/templates/core/home.html:1031
 msgid "Nuestros Servicios"
 msgstr "Our Services"
 
-#: core/templates/core/base.html:181 core/templates/core/home.html:1019
+#: core/templates/core/base.html:181 core/templates/core/home.html:1033
 msgid "Chatbots Inteligentes con IA"
 msgstr "AI Smart Chatbots"
 
 #: core/templates/core/base.html:182 core/templates/core/home.html:196
-#: core/templates/core/home.html:489 core/templates/core/home.html:1020
+#: core/templates/core/home.html:527 core/templates/core/home.html:1034
 msgid "Transcripción Automática"
 msgstr "Automatic Transcription"
 
 #: core/templates/core/base.html:183 core/templates/core/home.html:211
-#: core/templates/core/home.html:1021
+#: core/templates/core/home.html:1035
 msgid "Soluciones Personalizadas"
 msgstr "Custom Solutions"
 
 #: core/templates/core/base.html:184 core/templates/core/home.html:201
-#: core/templates/core/home.html:1022
+#: core/templates/core/home.html:1036
 msgid "Asistentes Virtuales"
 msgstr "Virtual Assistants"
 
-#: core/templates/core/base.html:189 core/templates/core/home.html:1027
+#: core/templates/core/base.html:189 core/templates/core/home.html:1041
 msgid "Contáctanos"
 msgstr "Contact Us"
 
-#: core/templates/core/base.html:193 core/templates/core/home.html:1031
+#: core/templates/core/base.html:193 core/templates/core/home.html:1045
 msgid "Teléfono:"
 msgstr "Phone:"
 
-#: core/templates/core/base.html:195 core/templates/core/home.html:1033
+#: core/templates/core/base.html:195 core/templates/core/home.html:1047
 msgid "Correo:"
 msgstr "Email:"
 
@@ -563,11 +563,7 @@ msgstr "Educational and training programs and projects."
 msgid "Nuestra Historia"
 msgstr "Our Background"
 
-#: core/templates/core/home.html:433
-msgid "Est 1988"
-msgstr "Since 1988"
-
-#: core/templates/core/home.html:436
+#: core/templates/core/home.html:437
 msgid ""
 "es una start-up de alto impacto social con un equipo transdisciplinar "
 "experimentado y joven a la vez. Nos encontramos en fase de despliegue "
@@ -584,15 +580,21 @@ msgstr ""
 "is to improve social welfare and life quality through technology. We seek to "
 "transform services to improve the efficiency and well-being of people. "
 
-#: core/templates/core/home.html:441
-msgid "Watch Video"
+#: core/templates/core/home.html:442
+#, fuzzy
+#| msgid "Watch Video"
+msgid "Video"
 msgstr "Watch Video"
 
-#: core/templates/core/home.html:459
-msgid "Casos de Éxito"
-msgstr "Success Projects"
+#: core/templates/core/home.html:462
+msgid "Algunas de Nuestras Colaboraciones"
+msgstr "Some of Our Works"
 
 #: core/templates/core/home.html:478
+msgid "Colaboradores"
+msgstr "Colaborations"
+
+#: core/templates/core/home.html:516
 msgid ""
 "Descubre cómo nuestras soluciones han ayudado a otras empresas a alcanzar "
 "sus objetivos y mejorar su rendimiento."
@@ -600,112 +602,112 @@ msgstr ""
 "Find out how our solutions have helped other companies achieve their goals "
 "and improve their performance."
 
-#: core/templates/core/home.html:487
+#: core/templates/core/home.html:525
 msgid "Todo"
 msgstr "All"
 
-#: core/templates/core/home.html:488 core/templates/core/home.html:499
-#: core/templates/core/home.html:523 core/templates/core/home.html:571
-#: core/templates/core/home.html:583 core/templates/core/home.html:586
+#: core/templates/core/home.html:526 core/templates/core/home.html:537
+#: core/templates/core/home.html:561 core/templates/core/home.html:609
+#: core/templates/core/home.html:621 core/templates/core/home.html:624
 msgid "Suara"
 msgstr "Suara"
 
-#: core/templates/core/home.html:500 core/templates/core/home.html:501
-#: core/templates/core/home.html:524 core/templates/core/home.html:572
-#: core/templates/core/home.html:584
+#: core/templates/core/home.html:538 core/templates/core/home.html:539
+#: core/templates/core/home.html:562 core/templates/core/home.html:610
+#: core/templates/core/home.html:622
 msgid "Solución Personalizada"
 msgstr "Custom Solution"
 
-#: core/templates/core/home.html:502 core/templates/core/home.html:514
-#: core/templates/core/home.html:526 core/templates/core/home.html:538
-#: core/templates/core/home.html:550 core/templates/core/home.html:562
-#: core/templates/core/home.html:574 core/templates/core/home.html:598
+#: core/templates/core/home.html:540 core/templates/core/home.html:552
+#: core/templates/core/home.html:564 core/templates/core/home.html:576
+#: core/templates/core/home.html:588 core/templates/core/home.html:600
+#: core/templates/core/home.html:612 core/templates/core/home.html:636
 msgid "More Details"
 msgstr "More Details"
 
-#: core/templates/core/home.html:511 core/templates/core/home.html:547
-#: core/templates/core/home.html:559 core/templates/core/sthi-details.html:17
+#: core/templates/core/home.html:549 core/templates/core/home.html:585
+#: core/templates/core/home.html:597 core/templates/core/sthi-details.html:17
 msgid "STHI"
 msgstr "STHI"
 
-#: core/templates/core/home.html:512 core/templates/core/home.html:548
-#: core/templates/core/home.html:560
+#: core/templates/core/home.html:550 core/templates/core/home.html:586
+#: core/templates/core/home.html:598
 msgid "Transcripción Semi-Automática"
 msgstr "Semi-Automatic Transcription"
 
-#: core/templates/core/home.html:513 core/templates/core/sthi-details.html:12
+#: core/templates/core/home.html:551 core/templates/core/sthi-details.html:12
 msgid "Plataforma de Transcripción Semi-Automática"
 msgstr "Semi-Automatic Transcription Platform"
 
-#: core/templates/core/home.html:525
+#: core/templates/core/home.html:563
 msgid "Arquitectura Suara"
 msgstr "Suara Architecture"
 
-#: core/templates/core/home.html:536 core/templates/core/home.html:596
+#: core/templates/core/home.html:574 core/templates/core/home.html:634
 msgid "Chatbot Inteligente experto en Agroecología con IA"
 msgstr "AI-Powered Smart Chatbot Expert in Agroecology"
 
-#: core/templates/core/home.html:537
+#: core/templates/core/home.html:575
 msgid "Dashboard de Control"
 msgstr "Control Dashboard"
 
-#: core/templates/core/home.html:549
+#: core/templates/core/home.html:587
 msgid "Documento"
 msgstr ""
 
-#: core/templates/core/home.html:561
+#: core/templates/core/home.html:599
 msgid "Branding 2"
 msgstr ""
 
-#: core/templates/core/home.html:573
+#: core/templates/core/home.html:611
 msgid "Chatbot de ayuda"
 msgstr "Help Chatbot"
 
-#: core/templates/core/home.html:585
+#: core/templates/core/home.html:623
 msgid "Product 3"
 msgstr "Product 3"
 
-#: core/templates/core/home.html:656
+#: core/templates/core/home.html:670
 msgid "Transformemos Juntos tu Negocio"
 msgstr "Let's Transform Your Business Together"
 
-#: core/templates/core/home.html:673
+#: core/templates/core/home.html:687
 msgid "Barcelona"
 msgstr "Barcelona"
 
-#: core/templates/core/home.html:683
+#: core/templates/core/home.html:697
 msgid "Llámanos"
 msgstr "Call Us"
 
-#: core/templates/core/home.html:691
+#: core/templates/core/home.html:705
 msgid "Escríbenos"
 msgstr "Write to Us"
 
-#: core/templates/core/home.html:710
+#: core/templates/core/home.html:724
 msgid "Your Name"
 msgstr "Your Name"
 
-#: core/templates/core/home.html:713
+#: core/templates/core/home.html:727
 msgid "Your Email"
 msgstr "Your Email"
 
-#: core/templates/core/home.html:716
+#: core/templates/core/home.html:730
 msgid "Subject"
 msgstr "Subject"
 
-#: core/templates/core/home.html:719
+#: core/templates/core/home.html:733
 msgid "Message"
 msgstr "Message"
 
-#: core/templates/core/home.html:722
+#: core/templates/core/home.html:736
 msgid "ENVIAR"
 msgstr "SEND"
 
-#: core/templates/core/home.html:727
+#: core/templates/core/home.html:741
 msgid "Your message has been sent. Thank you!"
 msgstr "Your message has been sent. Thank you!"
 
-#: core/templates/core/home.html:729
+#: core/templates/core/home.html:743
 msgid ""
 "There was an error in your form submission. Please correct the errors and "
 "try again."
@@ -937,3 +939,9 @@ msgid ""
 msgstr ""
 "Safe and Inclusive Platform: Ensures a safe environment for young people, "
 "protecting their privacy and data."
+
+#~ msgid "Est 1988"
+#~ msgstr "Since 1988"
+
+#~ msgid "Casos de Éxito"
+#~ msgstr "Success Projects"

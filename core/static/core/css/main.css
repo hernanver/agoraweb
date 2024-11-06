@@ -3124,3 +3124,57 @@ section,
     left: auto;
   }
 }
+
+.universities-section {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.universities-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.university-box {
+  background:#f8f9fa;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.university-box a {
+  color: var(--heading-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.university-box:hover a{
+  color: var(--accent-color); /* Color del enlace */
+
+}
+
+
+.university-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .university-box {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .universities-section h3 {
+    font-size: 1.2rem;
+  }
+  .university-box {
+    font-size: 0.9rem;
+  }
+}
